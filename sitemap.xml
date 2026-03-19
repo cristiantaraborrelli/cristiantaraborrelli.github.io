@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://cristiantaraborrelli.github.io/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <!-- CEREMONIES -->
+  <url><loc>https://cristiantaraborrelli.github.io/ceremonies/italian-souvenir.html</loc><priority>0.9</priority><changefreq>yearly</changefreq><lastmod>2026-03-15</lastmod></url>
+  <!-- EVENTS -->
+  <url><loc>https://cristiantaraborrelli.github.io/events/amway-meraviglioso.html</loc><priority>0.8</priority><changefreq>yearly</changefreq><lastmod>2024-05-07</lastmod></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/sangeet-villa-gastel.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/expo-roma-2030-paris.html</loc><priority>0.8</priority><changefreq>yearly</changefreq><lastmod>2023-10-11</lastmod></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/iveco.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/expo-roma-2030.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/nido.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/opera-illumina-natale.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/moda-e-modi.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/ncb-convention.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/balance.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/events/intercoiffure.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <!-- MUSEUMS -->
+  <url><loc>https://cristiantaraborrelli.github.io/museums/citta-bambini.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/museums/acquario-meraviglie.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
+  <!-- PARKS -->
+  <url><loc>https://cristiantaraborrelli.github.io/parks/regno-di-natale.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://cristiantaraborrelli.github.io/parks/italia-miniatura.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+</urlset>
