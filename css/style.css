@@ -604,7 +604,7 @@ body {
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 3px;
 }
 
@@ -691,7 +691,7 @@ body {
   .project-row { grid-template-columns: 2fr 1fr; }
   .project-row-loc, .project-row-year { display: none; }
   .proj-intro { grid-template-columns: 1fr; gap: 3rem; }
-  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .gallery-grid { grid-template-columns: repeat(3,1fr); }
   .home-gallery { grid-template-columns: repeat(2,1fr); padding: 0 1.5rem 4rem; }
 }
 
@@ -709,7 +709,7 @@ body {
   .project-row-cat { display: none; }
   .proj-body { padding: 3rem 1.5rem; }
   .proj-hero-content { padding: 2rem 1.5rem; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
   .home-gallery { grid-template-columns: 1fr; padding: 0 1rem 3rem; }
   .back-link { padding: 1.2rem 1.5rem; }
   .footer { padding: 1.5rem; }
