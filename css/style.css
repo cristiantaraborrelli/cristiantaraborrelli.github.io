@@ -601,6 +601,29 @@ body {
 }
 .press-link:hover { color: var(--ink); border-color: var(--ink); }
 
+/* Video Gallery */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.video-grid .video-item {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--ink2);
+}
+.video-grid .video-item iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .video-grid { grid-template-columns: 1fr; }
+}
+
 /* Gallery */
 .gallery-grid {
   display: grid;
