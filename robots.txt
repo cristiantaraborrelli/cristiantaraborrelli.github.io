@@ -1,3 +1,97 @@
-User-agent: *
-Allow: /
-Sitemap: https://cristiantaraborrelli.github.io/sitemap.xml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Giovanni | Regia Cristian Taraborrelli</title>
+  <meta name="description" content="Don Giovanni di Mozart con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinterpreta il dramma giocoso mozartiano attraverso una visione scenica contemporanea, dove seduzione e morte si intrecciano in un gioco di specchi.">
+  <meta name="keywords" content="Cristian Taraborrelli, Don Giovanni, regia, scenografia, opera, teatro, Wolfgang Amadeus Mozart, Teatro Lirico">
+  <meta name="author" content="Cristian Taraborrelli Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cristiantaraborrelli.github.io/theatre/don-giovanni.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Don Giovanni — Regia Cristian Taraborrelli">
+  <meta property="og:description" content="Don Giovanni di Mozart con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinterpreta il dramma giocoso mozartiano attraverso una visione scenica contemporanea, dove seduzione e morte si intrecciano in un gioco di specchi.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/99645d_118b35012281440bbf3cd46db95ba891~mv2.png">
+  <meta property="og:url" content="https://cristiantaraborrelli.github.io/theatre/don-giovanni.html">
+  <meta property="og:site_name" content="Cristian Taraborrelli Studio">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"TheaterEvent","name":"Don Giovanni","description":"Don Giovanni di Mozart con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinterpreta il dramma giocoso mozartiano attraverso una visione scenica contemporanea, dove seduzione e morte si intrecciano in un gioco di specchi.","startDate":"2014","location":{"@type":"Place","name":"Teatro Lirico"},"director":{"@type":"Person","name":"Cristian Taraborrelli","url":"https://cristiantaraborrelli.github.io"},"composer":{"@type":"Person","name":"Wolfgang Amadeus Mozart"}}
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">CRISTIANTARABORRELLI<strong>STUDIO</strong>®</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Works</a></li>
+    <li class="nav-item">
+      <a href="#" class="active">Theatre</a>
+      <ul class="nav-dropdown">
+        <li><a href="angelica-cunta.html">Angelica Cunta</a></li>
+        <li><a href="la-jura.html">La Jura</a></li>
+        <li><a href="pagliacci.html">Pagliacci — AR Breaks into Opera</a></li>
+        <li><a href="kurtag.html">Kurtag — Frammenti</a></li>
+        <li><a href="opera-de-quatsous.html">L'Opera de Quat'Sous</a></li>
+        <li><a href="on-ne-pais-pas.html">On Ne Pais Pas</a></li>
+        <li><a href="sonnambula-ancona.html">La Sonnambula Ancona</a></li>
+        <li><a href="mariage-de-figaro.html">Le Mariage de Figaro</a></li>
+        <li><a href="sonnambula.html">La Sonnambula</a></li>
+        <li><a href="colore-del-sole.html">Il Colore del Sole</a></li>
+        <li><a href="belle-helene.html">La Belle Hélène</a></li>
+        <li><a href="macbeth.html">Macbeth</a></li>
+        <li><a href="turandot.html">Turandot</a></li>
+        <li><a href="elisir-damore.html">L'Elisir d'Amore</a></li>
+        <li><a href="don-carlos.html">Don Carlos</a></li>
+        <li><a href="luisa-miller.html">Luisa Miller</a></li>
+        <li><a href="pietra-del-paragone.html">La Pietra del Paragone</a></li>
+        <li><a href="due-foscari.html">I Due Foscari</a></li>
+        <li><a href="don-giovanni.html">Don Giovanni</a></li>
+        <li><a href="munchhausen.html">Münchhausen?</a></li>
+        <li><a href="ventrosoleil.html">Ventrosoleil</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#">Events</a></li>
+    <li class="nav-item"><a href="#">Ceremonies</a></li>
+    <li class="nav-item"><a href="#">Museums</a></li>
+    <li class="nav-item"><a href="#">Parks</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank">Instagram</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+<main class="page">
+  <a href="../index.html" class="back-link">All works</a>
+  <section class="proj-hero">
+    <img src="https://static.wixstatic.com/media/99645d_118b35012281440bbf3cd46db95ba891~mv2.png" alt="Don Giovanni — regia e scene di Cristian Taraborrelli, Teatro Lirico 2014">
+    <div class="proj-hero-overlay"></div>
+    <div class="proj-hero-content">
+      <p class="proj-hero-cat">Theatre · Opera · 2014</p>
+      <h1 class="proj-hero-title">Don Giovanni</h1>
+      <p class="proj-hero-meta">Wolfgang Amadeus Mozart · Teatro Lirico · 2014</p>
+    </div>
+  </section>
+  <article class="proj-body">
+    <div class="proj-intro reveal">
+      <div class="proj-intro-text">
+        <p>Don Giovanni di Mozart con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinterpreta il dramma giocoso mozartiano attraverso una visione scenica contemporanea, dove seduzione e morte si intrecciano in un gioco di specchi.</p>
+      </div>
+      <div class="proj-meta">
+        <div><p class="proj-meta-label">Compositore</p><p class="proj-meta-val">Wolfgang Amadeus Mozart</p></div>
+        <div><p class="proj-meta-label">Teatro</p><p class="proj-meta-val">Teatro Lirico</p></div>
+        <div><p class="proj-meta-label">Anno</p><p class="proj-meta-val">2014</p></div>
+        <div><p class="proj-meta-label">Regia e Scene</p><p class="proj-meta-val">Cristian Taraborrelli</p></div>
+      </div>
+    </div>
+    <div class="proj-sec reveal">
+      <p class="s-label">Tags</p>
+      <div class="tags-row"><span class="tag">Don Giovanni</span><span class="tag">Mozart</span><span class="tag">Dramma Giocoso</span><span class="tag">Regia</span><span class="tag">Scenografia</span><span class="tag">Opera Lirica</span><span class="tag">Da Ponte</span><span class="tag">Seduzione</span></div>
+    </div>
+  </article>
+  <footer class="footer">
+    <p class="footer-copy">© 2026 Cristian Taraborrelli Studio — P.I. 17597231004</p>
+    <a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank" class="footer-link">Instagram ↗</a>
+  </footer>
+</main>
+<script src="../js/main.js"></script>
+</body>
+</html>

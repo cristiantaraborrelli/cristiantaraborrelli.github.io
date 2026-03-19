@@ -1,46 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cristiantaraborrelli.github.io/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
-  <!-- CEREMONIES -->
-  <url><loc>https://cristiantaraborrelli.github.io/ceremonies/italian-souvenir.html</loc><priority>0.9</priority><changefreq>yearly</changefreq><lastmod>2026-03-15</lastmod></url>
-  <!-- EVENTS -->
-  <url><loc>https://cristiantaraborrelli.github.io/events/amway-meraviglioso.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/sangeet-villa-gastel.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/expo-roma-2030-paris.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/iveco.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/expo-roma-2030.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/nido.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/opera-illumina-natale.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/moda-e-modi.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/ncb-convention.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/balance.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/events/intercoiffure.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <!-- THEATRE -->
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/angelica-cunta.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/la-jura.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/pagliacci.html</loc><priority>0.9</priority><changefreq>yearly</changefreq><lastmod>2021-01-01</lastmod></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/kurtag.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/opera-de-quatsous.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/on-ne-pais-pas.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/sonnambula-ancona.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/mariage-de-figaro.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/sonnambula.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/colore-del-sole.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/belle-helene.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/macbeth.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/turandot.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/elisir-damore.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/don-carlos.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/luisa-miller.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/pietra-del-paragone.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/due-foscari.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/don-giovanni.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/munchhausen.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/theatre/ventrosoleil.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <!-- MUSEUMS -->
-  <url><loc>https://cristiantaraborrelli.github.io/museums/citta-bambini.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/museums/acquario-meraviglie.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
-  <!-- PARKS -->
-  <url><loc>https://cristiantaraborrelli.github.io/parks/regno-di-natale.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://cristiantaraborrelli.github.io/parks/italia-miniatura.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
-</urlset>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Jura | Regia Cristian Taraborrelli</title>
+  <meta name="description" content="La Jura — una produzione operistica con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinventa il testo attraverso una visione scenica contemporanea, dove lo spazio diventa narrazione.">
+  <meta name="keywords" content="Cristian Taraborrelli, La Jura, regia, scenografia, opera, teatro, Teatro Lirico di Cagliari, Italia">
+  <meta name="author" content="Cristian Taraborrelli Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cristiantaraborrelli.github.io/theatre/la-jura.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="La Jura — Regia Cristian Taraborrelli">
+  <meta property="og:description" content="La Jura — una produzione operistica con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinventa il testo attraverso una visione scenica contemporanea, dove lo spazio diventa narrazione.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/3e76cd_b1b4e4f96b454460a474aa6ed848a13a~mv2.jpg">
+  <meta property="og:url" content="https://cristiantaraborrelli.github.io/theatre/la-jura.html">
+  <meta property="og:site_name" content="Cristian Taraborrelli Studio">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"TheaterEvent","name":"La Jura","description":"La Jura — una produzione operistica con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinventa il testo attraverso una visione scenica contemporanea, dove lo spazio diventa narrazione.","startDate":"2022","location":{"@type":"Place","name":"Italia"},"director":{"@type":"Person","name":"Cristian Taraborrelli","url":"https://cristiantaraborrelli.github.io"},"composer":{"@type":"Person","name":"Teatro Lirico di Cagliari"}}
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">CRISTIANTARABORRELLI<strong>STUDIO</strong>®</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Works</a></li>
+    <li class="nav-item">
+      <a href="#" class="active">Theatre</a>
+      <ul class="nav-dropdown">
+        <li><a href="angelica-cunta.html">Angelica Cunta</a></li>
+        <li><a href="la-jura.html">La Jura</a></li>
+        <li><a href="pagliacci.html">Pagliacci — AR Breaks into Opera</a></li>
+        <li><a href="kurtag.html">Kurtag — Frammenti</a></li>
+        <li><a href="opera-de-quatsous.html">L'Opera de Quat'Sous</a></li>
+        <li><a href="on-ne-pais-pas.html">On Ne Pais Pas</a></li>
+        <li><a href="sonnambula-ancona.html">La Sonnambula Ancona</a></li>
+        <li><a href="mariage-de-figaro.html">Le Mariage de Figaro</a></li>
+        <li><a href="sonnambula.html">La Sonnambula</a></li>
+        <li><a href="colore-del-sole.html">Il Colore del Sole</a></li>
+        <li><a href="belle-helene.html">La Belle Hélène</a></li>
+        <li><a href="macbeth.html">Macbeth</a></li>
+        <li><a href="turandot.html">Turandot</a></li>
+        <li><a href="elisir-damore.html">L'Elisir d'Amore</a></li>
+        <li><a href="don-carlos.html">Don Carlos</a></li>
+        <li><a href="luisa-miller.html">Luisa Miller</a></li>
+        <li><a href="pietra-del-paragone.html">La Pietra del Paragone</a></li>
+        <li><a href="due-foscari.html">I Due Foscari</a></li>
+        <li><a href="don-giovanni.html">Don Giovanni</a></li>
+        <li><a href="munchhausen.html">Münchhausen?</a></li>
+        <li><a href="ventrosoleil.html">Ventrosoleil</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#">Events</a></li>
+    <li class="nav-item"><a href="#">Ceremonies</a></li>
+    <li class="nav-item"><a href="#">Museums</a></li>
+    <li class="nav-item"><a href="#">Parks</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank">Instagram</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+<main class="page">
+  <a href="../index.html" class="back-link">All works</a>
+  <section class="proj-hero">
+    <img src="https://static.wixstatic.com/media/3e76cd_b1b4e4f96b454460a474aa6ed848a13a~mv2.jpg" alt="La Jura — regia e scene di Cristian Taraborrelli, Italia 2022">
+    <div class="proj-hero-overlay"></div>
+    <div class="proj-hero-content">
+      <p class="proj-hero-cat">Theatre · Opera · 2022</p>
+      <h1 class="proj-hero-title">La Jura</h1>
+      <p class="proj-hero-meta">Teatro Lirico di Cagliari · Italia · 2022</p>
+    </div>
+  </section>
+  <article class="proj-body">
+    <div class="proj-intro reveal">
+      <div class="proj-intro-text">
+        <p>La Jura — una produzione operistica con la regia e le scene di Cristian Taraborrelli. Un allestimento che reinventa il testo attraverso una visione scenica contemporanea, dove lo spazio diventa narrazione.</p>
+      </div>
+      <div class="proj-meta">
+        <div><p class="proj-meta-label">Compositore</p><p class="proj-meta-val">Teatro Lirico di Cagliari</p></div>
+        <div><p class="proj-meta-label">Teatro</p><p class="proj-meta-val">Italia</p></div>
+        <div><p class="proj-meta-label">Anno</p><p class="proj-meta-val">2022</p></div>
+        <div><p class="proj-meta-label">Regia e Scene</p><p class="proj-meta-val">Cristian Taraborrelli</p></div>
+      </div>
+    </div>
+    <div class="proj-sec reveal">
+      <p class="s-label">Tags</p>
+      <div class="tags-row"><span class="tag">La Jura</span><span class="tag">Opera</span><span class="tag">Regia</span><span class="tag">Scenografia</span><span class="tag">Teatro Lirico di Cagliari</span><span class="tag">Italia</span></div>
+    </div>
+  </article>
+  <footer class="footer">
+    <p class="footer-copy">© 2026 Cristian Taraborrelli Studio — P.I. 17597231004</p>
+    <a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank" class="footer-link">Instagram ↗</a>
+  </footer>
+</main>
+<script src="../js/main.js"></script>
+</body>
+</html>
