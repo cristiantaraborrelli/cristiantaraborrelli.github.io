@@ -53,12 +53,17 @@ body {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 0.82rem;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 0.01em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink);
+}
+
+.nav-logo strong {
+  font-weight: 700;
 }
 
 .nav-links {
@@ -355,10 +360,10 @@ body {
 
 .proj-meta-label {
   font-size: 0.55rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted2);
+  color: var(--ink2);
   margin-bottom: 0.3rem;
 }
 
@@ -371,11 +376,11 @@ body {
 
 /* Section label */
 .s-label {
-  font-size: 0.55rem;
-  font-weight: 300;
+  font-size: 0.58rem;
+  font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted2);
+  color: var(--ink2);
   margin-bottom: 1.8rem;
 }
 
@@ -404,10 +409,10 @@ body {
 
 .team-role {
   font-size: 0.6rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink2);
   display: flex;
   align-items: center;
 }
@@ -436,10 +441,10 @@ body {
 
 .artist-role-label {
   font-size: 0.52rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted2);
+  color: var(--ink2);
   margin-bottom: 0.4rem;
 }
 
