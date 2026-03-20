@@ -493,6 +493,17 @@ body {
   margin-bottom: 1.8rem;
 }
 
+.s-sublabel {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: -1.2rem;
+  margin-bottom: 1.8rem;
+}
+
 /* Proj section */
 .proj-sec {
   margin-bottom: 4rem;
