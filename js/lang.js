@@ -57,9 +57,12 @@
       '<button class="lang-btn" data-lang="' + l + '">' + l.toUpperCase() + '</button>'
     ).join('<span class="lang-sep">|</span>');
 
-    // Insert into nav
+    // Insert into nav, before the toggle button
     const nav = document.querySelector('.nav');
-    if (nav) {
+    const toggle = document.querySelector('.nav-toggle');
+    if (nav && toggle) {
+      nav.insertBefore(switcher, toggle);
+    } else if (nav) {
       nav.appendChild(switcher);
     }
 
