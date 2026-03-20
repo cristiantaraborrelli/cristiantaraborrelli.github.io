@@ -579,6 +579,36 @@ body {
   margin-bottom: 1rem;
 }
 
+blockquote.press-quote {
+  border-left: 2px solid var(--muted2, #ccc);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+blockquote.press-quote p {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--ink2);
+  margin-bottom: 0.5rem;
+}
+blockquote.press-quote footer {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+blockquote.press-quote footer a {
+  border-bottom: 1px solid var(--muted2, #ccc);
+  padding-bottom: 1px;
+}
+blockquote.press-quote footer a:hover {
+  color: var(--ink);
+}
+
 .press-source {
   font-size: 0.58rem;
   font-weight: 300;
