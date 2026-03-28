@@ -150,13 +150,35 @@
     .cst-dark .cst-step-num { color:rgba(160,80,200,0.7); }
     .cst-dark .cst-step-label { color:rgba(232,230,225,0.8); }
 
-    /* Stats */
-    .cst-dark .cst-stat-num {
-      background:linear-gradient(135deg,#e040a0,#a855f7);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      background-clip:text;
+    /* Stats — big numbers in grid */
+    .cst-dark .cst-stats {
+      display:grid !important;grid-template-columns:repeat(4,1fr) !important;
+      gap:2rem !important;padding:2rem 0 !important;
     }
-    .cst-dark .cst-stat-label { color:rgba(232,230,225,0.5); }
+    .cst-dark .cst-stat { text-align:center !important; }
+    .cst-dark .cst-stat-num {
+      font-size:clamp(3rem,7vw,5rem) !important;
+      font-weight:300 !important;letter-spacing:-0.02em !important;
+      color:#e8e6e1 !important;background:none !important;
+      -webkit-text-fill-color:#e8e6e1 !important;
+      line-height:1 !important;margin-bottom:0.8rem !important;
+    }
+    .cst-dark .cst-stat-label {
+      color:rgba(232,230,225,0.45) !important;
+      font-size:0.8rem !important;line-height:1.5 !important;
+    }
+    @media (max-width:768px) {
+      .cst-dark .cst-stats { grid-template-columns:repeat(2,1fr) !important; }
+    }
+
+    /* Steps — horizontal grid */
+    .cst-dark .cst-steps {
+      display:grid !important;grid-template-columns:repeat(3,1fr) !important;
+      gap:1.5rem !important;
+    }
+    @media (max-width:768px) {
+      .cst-dark .cst-steps { grid-template-columns:repeat(2,1fr) !important; }
+    }
 
     /* CTA */
     .cst-dark .cst-cta {
