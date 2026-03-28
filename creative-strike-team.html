@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Strike Team | Cristian Taraborrelli Studio</title>
+  <meta name="description" content="Creative Strike Team — Visual support for agencies. Concept art, 3D, motion design and storyboard for pitches and tenders.">
+  <meta name="author" content="Cristian Taraborrelli Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.cristiantaraborrellistudio.net/creative-strike-team.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Creative Strike Team | Cristian Taraborrelli Studio">
+  <meta property="og:description" content="Visual support for agencies. Concept art, 3D, motion design and storyboard for pitches and tenders.">
+  <meta property="og:url" content="https://www.cristiantaraborrellistudio.net/creative-strike-team.html">
+  <meta property="og:site_name" content="Cristian Taraborrelli Studio">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Creative Strike Team",
+    "provider": {
+      "@type": "Organization",
+      "name": "Cristian Taraborrelli Studio"
+    },
+    "description": "Visual support for agencies: concept art, 3D visualization, motion design, storyboards for pitches and tenders.",
+    "areaServed": "Worldwide",
+    "serviceType": "Creative Visual Services"
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── CST DARK THEME ── */
+    body { background:#0a0a0a !important; }
+    :root {
+      --bg:#0a0a0a !important;
+      --bg2:#141414 !important;
+      --ink:#e8e6e1 !important;
+      --ink2:#e8e6e1 !important;
+      --muted:rgba(232,230,225,0.5) !important;
+      --muted2:rgba(232,230,225,0.2) !important;
+      --line:rgba(255,255,255,0.06) !important;
+    }
+    .nav { background:#0a0a0a !important; border-bottom-color:rgba(255,255,255,0.06) !important; }
+    .nav-logo, .nav-links a { color:#e8e6e1 !important; }
+    .nav-links a:hover { color:#a855f7 !important; }
+    .nav-links a.active { color:#e040a0 !important; }
+    .nav-dropdown { background:#141414 !important; border-color:rgba(255,255,255,0.08) !important; }
+    .nav-dropdown a { color:rgba(232,230,225,0.7) !important; }
+    .nav-dropdown a:hover { color:#e8e6e1 !important; }
+    .nav-toggle span { background:#e8e6e1 !important; }
+    .cst-dark { background:#0a0a0a; color:#e8e6e1; }
+    .cst-dark .back-link { color:rgba(232,230,225,0.4); }
+    .cst-dark .back-link:hover { color:#e8e6e1; }
+    .cst-dark .footer { border-top-color:rgba(255,255,255,0.08); }
+    .cst-dark .footer-copy, .cst-dark .footer-link { color:rgba(232,230,225,0.4); }
+
+    /* Hero */
+    .cst-dark .cst-hero-title {
+      font-family:var(--font-title);font-size:clamp(2.6rem,6vw,4.5rem);
+      text-transform:uppercase;letter-spacing:0.04em;line-height:1;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg,#e040a0,#a855f7,#6366f1);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .cst-dark .cst-hero-sub {
+      font-family:var(--font-serif);font-size:clamp(1.1rem,2.5vw,1.5rem);
+      font-style:italic;line-height:1.5;color:rgba(232,230,225,0.85);
+      max-width:600px;margin-bottom:1.5rem;
+    }
+    .cst-dark .cst-hero-desc {
+      font-family:var(--font-sans);font-size:0.9rem;font-weight:300;
+      line-height:1.8;color:rgba(232,230,225,0.55);max-width:560px;
+    }
+    .cst-dark .cst-manifesto-line {
+      font-family:var(--font-sans);font-size:0.6rem;font-weight:300;
+      letter-spacing:0.18em;text-transform:uppercase;
+      color:rgba(232,230,225,0.35);margin-bottom:2.5rem;
+      border-left:2px solid rgba(232,230,225,0.15);padding-left:1rem;
+      max-width:480px;
+    }
+
+    /* Meta sidebar */
+    .cst-dark .proj-meta { border-left-color:rgba(255,255,255,0.08); }
+    .cst-dark .proj-meta-label { color:rgba(232,230,225,0.35); }
+    .cst-dark .proj-meta-val { color:#e8e6e1; }
+
+    /* Sections */
+    .cst-dark .proj-sec { border-bottom-color:rgba(255,255,255,0.06); }
+    .cst-dark .s-label { color:rgba(232,230,225,0.3); }
+    .cst-dark .cst-sec-intro {
+      font-family:var(--font-serif);font-size:1.05rem;font-style:italic;
+      line-height:1.8;color:rgba(232,230,225,0.7);margin-bottom:2rem;
+    }
+    .cst-dark .cst-sec-text {
+      font-family:var(--font-serif);font-size:1.05rem;line-height:1.8;
+      color:rgba(232,230,225,0.75);
+    }
+
+    /* Service cards — force dark */
+    .cst-dark .cst-audience-grid {
+      display:grid !important;grid-template-columns:repeat(auto-fill,minmax(280px,1fr)) !important;gap:1.5rem !important;
+    }
+    .cst-dark .cst-audience-card {
+      background:rgba(255,255,255,0.03) !important;border:1px solid rgba(255,255,255,0.08) !important;
+      border-radius:12px !important;padding:2rem 1.8rem !important;transition:border-color .3s,transform .3s;
+    }
+    .cst-dark .cst-audience-card:hover {
+      border-color:rgba(160,80,200,0.4) !important;transform:translateY(-3px);
+    }
+    .cst-dark .cst-audience-title {
+      color:#e8e6e1 !important;font-size:1rem !important;margin-bottom:0.8rem !important;
+    }
+    .cst-dark .cst-audience-desc {
+      color:rgba(232,230,225,0.55) !important;font-size:0.88rem !important;line-height:1.7 !important;
+    }
+
+    /* Force dark on ALL elements inside .cst-dark */
+    .cst-dark .page,
+    .cst-dark.page { background:#0a0a0a !important; }
+    .cst-dark .proj-body { color:#e8e6e1; }
+    .cst-dark .proj-intro { border-bottom-color:rgba(255,255,255,0.06) !important; }
+    .cst-dark .proj-intro-text { color:#e8e6e1; }
+
+    /* SVG Icons — wireframe multicolor */
+    .cst-dark .cst-icon {
+      width:52px;height:52px;margin-bottom:1.2rem;
+      stroke-width:1.2;fill:none;
+    }
+    .cst-dark .cst-audience-card:nth-child(1) .cst-icon { stroke:#a855f7; }
+    .cst-dark .cst-audience-card:nth-child(2) .cst-icon { stroke:#e040a0; }
+    .cst-dark .cst-audience-card:nth-child(3) .cst-icon { stroke:#6366f1; }
+    .cst-dark .cst-audience-card:nth-child(4) .cst-icon { stroke:#a855f7; }
+    .cst-dark .cst-audience-card:nth-child(5) .cst-icon { stroke:#e040a0; }
+    .cst-dark .cst-audience-card:nth-child(6) .cst-icon { stroke:#6366f1; }
+    .cst-dark .cst-audience-card:nth-child(7) .cst-icon { stroke:#a855f7; }
+    .cst-dark .cst-audience-card:nth-child(8) .cst-icon { stroke:#e040a0; }
+    .cst-dark .cst-audience-card:nth-child(9) .cst-icon { stroke:#6366f1; }
+    .cst-dark .cst-audience-card:nth-child(10) .cst-icon { stroke:#a855f7; }
+
+    /* Team grid */
+    .cst-dark .artists-grid { gap:1rem; }
+    .cst-dark .artist-cell {
+      background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+      border-radius:8px;padding:1.2rem;
+    }
+    .cst-dark .artist-role-label { color:rgba(232,230,225,0.8); }
+
+    /* Steps */
+    .cst-dark .cst-step { border-color:rgba(255,255,255,0.08); }
+    .cst-dark .cst-step-num { color:rgba(160,80,200,0.7); }
+    .cst-dark .cst-step-label { color:rgba(232,230,225,0.8); }
+
+    /* Stats */
+    .cst-dark .cst-stat-num {
+      background:linear-gradient(135deg,#e040a0,#a855f7);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .cst-dark .cst-stat-label { color:rgba(232,230,225,0.5); }
+
+    /* CTA */
+    .cst-dark .cst-cta {
+      background:linear-gradient(135deg,#e040a0,#a855f7);color:#fff;
+      border:none;padding:1rem 2.5rem;border-radius:6px;
+      font-family:var(--font-sans);font-size:0.75rem;font-weight:500;
+      letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;
+      display:inline-block;transition:opacity .3s;
+    }
+    .cst-dark .cst-cta:hover { opacity:0.85; }
+
+    /* Dividers inside dark */
+    .cst-dark .cst-divider { border-top-color:rgba(255,255,255,0.06); }
+
+    /* Feasibility highlight */
+    .cst-dark .cst-feasibility-box {
+      background:rgba(160,80,200,0.06);border:1px solid rgba(160,80,200,0.2);
+      border-radius:12px;padding:2.5rem;margin-top:1.5rem;
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">CRISTIANTARABORRELLI<strong>STUDIO</strong>&reg;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Gallery</a></li>
+    <li class="nav-item">
+      <a href="#">Theatre</a>
+      <ul class="nav-dropdown">
+        <li><a href="theatre/planetaria.html">Planetaria</a></li>
+        <li><a href="theatre/angelica-cunta.html">Angelica Cunta</a></li>
+        <li><a href="theatre/la-jura.html">La Jura</a></li>
+        <li><a href="theatre/pagliacci.html">Pagliacci &mdash; AR Breaks into Opera</a></li>
+        <li><a href="theatre/kurtag.html">Kurtag &mdash; Frammenti</a></li>
+        <li><a href="theatre/opera-de-quatsous.html">L'Opera de Quat'Sous</a></li>
+        <li><a href="theatre/on-ne-pais-pas.html">On Ne Pais Pas</a></li>
+        <li><a href="theatre/sonnambula-ancona.html">La Sonnambula Ancona</a></li>
+        <li><a href="theatre/mariage-de-figaro.html">Le Mariage de Figaro</a></li>
+        <li><a href="theatre/sonnambula.html">La Sonnambula</a></li>
+        <li><a href="theatre/colore-del-sole.html">Il Colore del Sole</a></li>
+        <li><a href="theatre/belle-helene.html">La Belle Helene</a></li>
+        <li><a href="theatre/macbeth.html">Macbeth</a></li>
+        <li><a href="theatre/turandot.html">Turandot</a></li>
+        <li><a href="theatre/elisir-damore.html">L'Elisir d'Amore</a></li>
+        <li><a href="theatre/don-carlos.html">Don Carlos</a></li>
+        <li><a href="theatre/luisa-miller.html">Luisa Miller</a></li>
+        <li><a href="theatre/pietra-del-paragone.html">La Pietra del Paragone</a></li>
+        <li><a href="theatre/due-foscari.html">I Due Foscari</a></li>
+        <li><a href="theatre/don-giovanni.html">Don Giovanni</a></li>
+        <li><a href="theatre/munchhausen.html">Munchhausen?</a></li>
+        <li><a href="theatre/ventrosoleil.html">Ventrosoleil</a></li>
+        <li><a href="theatre/variazioni-cielo.html">Variazioni sul Cielo</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Events</a>
+      <ul class="nav-dropdown">
+        <li><a href="events/amway-meraviglioso.html">Amway China &mdash; Meraviglioso</a></li>
+        <li><a href="events/sangeet-villa-gastel.html">Sangeet &mdash; Villa Gastel</a></li>
+        <li><a href="events/expo-roma-2030-paris.html">Expo Roma 2030 in Paris</a></li>
+        <li><a href="events/iveco.html">Iveco &mdash; Connecting Dots</a></li>
+        <li><a href="events/expo-roma-2030.html">Expo Roma 2030</a></li>
+        <li><a href="events/nido.html">Nido</a></li>
+        <li><a href="events/opera-illumina-natale.html">L'Opera Illumina il Natale</a></li>
+        <li><a href="events/moda-e-modi.html">Moda e Modi</a></li>
+        <li><a href="events/ncb-convention.html">NCB Convention</a></li>
+        <li><a href="events/balance.html">Balance</a></li>
+        <li><a href="events/intercoiffure.html">Intercoiffure</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Ceremonies</a>
+      <ul class="nav-dropdown">
+        <li><a href="ceremonies/italian-souvenir.html">Italian Souvenir</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Museums</a>
+      <ul class="nav-dropdown">
+        <li><a href="museums/citta-bambini.html">Citta dei Bambini e dei Ragazzi</a></li>
+        <li><a href="museums/acquario-meraviglie.html">L'Acquario delle Nuove Meraviglie</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Parks</a>
+      <ul class="nav-dropdown">
+        <li><a href="parks/regno-di-natale.html">Il Regno di Natale</a></li>
+        <li><a href="parks/italia-miniatura.html">Italia in Miniatura</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="creative-strike-team.html" class="active">Creative Strike Team</a></li>
+    <li><a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank">Instagram</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+<main class="page cst-dark">
+  <a href="index.html" class="back-link" data-i18n="back-link" data-en="All works" data-it="Tutti i lavori" data-fr="Toutes les &oelig;uvres">All works</a>
+
+  <article class="proj-body">
+
+    <!-- ═══ HERO / INTRO ═══ -->
+    <div class="proj-intro reveal">
+      <div class="proj-intro-text">
+        <h1 class="cst-hero-title">Creative Strike Team</h1>
+
+        <p class="cst-manifesto-line" data-i18n="cst-manifesto" data-it="Un&rsquo;unit&agrave; creativa su misura, costruita intorno al tuo progetto. Ascolta, immagina, realizza." data-en="A tailor-made creative unit, built around your project. It listens, envisions, delivers." data-fr="Une unit&eacute; cr&eacute;ative sur mesure, construite autour de votre projet. Elle &eacute;coute, imagine, r&eacute;alise.">A tailor-made creative unit, built around your project. It listens, envisions, delivers.</p>
+
+        <div data-lang-block="it">
+          <p class="cst-hero-sub">Ogni progetto nasce da una visione.<br>Il nostro compito &egrave; renderla visibile.</p>
+          <p class="cst-hero-desc">Supporto visivo e creativo per agenzie eventi e direttori creativi.</p>
+        </div>
+        <div data-lang-block="en">
+          <p class="cst-hero-sub">Every project begins with a vision.<br>Our job is to make it visible.</p>
+          <p class="cst-hero-desc">Visual and creative support for event agencies and creative directors.</p>
+        </div>
+        <div data-lang-block="fr">
+          <p class="cst-hero-sub">Chaque projet na&icirc;t d&rsquo;une vision.<br>Notre mission est de la rendre visible.</p>
+          <p class="cst-hero-desc">Support visuel et cr&eacute;atif pour agences &eacute;v&eacute;nementielles et directeurs cr&eacute;atifs.</p>
+        </div>
+      </div>
+
+      <div class="proj-meta">
+        <div>
+          <p class="proj-meta-label" data-i18n="cst-meta-type" data-en="Service" data-it="Servizio" data-fr="Service">Service</p>
+          <p class="proj-meta-val" data-i18n="cst-meta-type-val" data-en="Visual &amp; Creative Support" data-it="Supporto Visivo &amp; Creativo" data-fr="Support Visuel &amp; Cr&eacute;atif">Visual &amp; Creative Support</p>
+        </div>
+        <div>
+          <p class="proj-meta-label" data-i18n="cst-meta-mode" data-en="Mode" data-it="Modalit&agrave;" data-fr="Modalit&eacute;">Mode</p>
+          <p class="proj-meta-val">White Label</p>
+        </div>
+        <div>
+          <p class="proj-meta-label" data-i18n="cst-meta-delivery" data-en="Delivery" data-it="Consegna" data-fr="Livraison">Delivery</p>
+          <p class="proj-meta-val" data-i18n="cst-meta-delivery-val" data-en="Standard 3&ndash;5 days &middot; Express 24&ndash;48h" data-it="Standard 3&ndash;5 giorni &middot; Express 24&ndash;48h" data-fr="Standard 3&ndash;5 jours &middot; Express 24&ndash;48h">Standard 3&ndash;5 days &middot; Express 24&ndash;48h</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CHI SIAMO ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-who" data-en="Who We Are" data-it="Chi Siamo" data-fr="Qui Sommes-Nous">Who We Are</p>
+      <div style="max-width:680px;">
+        <div data-lang-block="it"><p class="cst-sec-text">Creative Strike Team &egrave; il servizio con cui lo studio mette a disposizione team dedicati di creativi, visual designer e 3D artist con background negli eventi, nell&rsquo;arte e nel teatro. Per ogni progetto viene configurato un team su misura, guidato da un unico referente che coordina tutto in tempi rapidissimi.</p></div>
+        <div data-lang-block="en"><p class="cst-sec-text">Creative Strike Team is the studio&rsquo;s service that provides dedicated teams of creatives, visual designers and 3D artists with a background in events, art and theatre. For each project, a tailor-made team is configured and led by a single point of contact who coordinates everything at top speed.</p></div>
+        <div data-lang-block="fr"><p class="cst-sec-text">Creative Strike Team est le service par lequel le studio met &agrave; disposition des &eacute;quipes d&eacute;di&eacute;es de cr&eacute;atifs, designers visuels et artistes 3D issus de l&rsquo;&eacute;v&eacute;nementiel, de l&rsquo;art et du th&eacute;&acirc;tre. Pour chaque projet, une &eacute;quipe sur mesure est configur&eacute;e et pilot&eacute;e par un r&eacute;f&eacute;rent unique qui coordonne le tout dans des d&eacute;lais tr&egrave;s courts.</p></div>
+      </div>
+    </div>
+
+    <!-- ═══ COSA POSSIAMO FARE ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-services" data-en="What We Can Do" data-it="Cosa Possiamo Fare" data-fr="Ce Que Nous Pouvons Faire">What We Can Do</p>
+      <div data-lang-block="it"><p class="cst-sec-intro">Dal concept alla consegna. Tutto ci&ograve; che serve per rendere visibile un&rsquo;idea.</p></div>
+      <div data-lang-block="en"><p class="cst-sec-intro">From concept to delivery. Everything you need to make an idea visible.</p></div>
+      <div data-lang-block="fr"><p class="cst-sec-intro">Du concept &agrave; la livraison. Tout ce qu&rsquo;il faut pour rendre une id&eacute;e visible.</p></div>
+
+      <div class="cst-audience-grid">
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="4"/><line x1="6" y1="18" x2="42" y2="18"/><circle cx="24" cy="30" r="6"/></svg>
+          <p class="cst-audience-title">Concept Art &amp; Visual Design</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Tavole visive, moodboard, ambientazioni scenografiche.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Visual boards, moodboards, scenic environments.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Planches visuelles, moodboards, ambiances sc&eacute;nographiques.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><path d="M24 4L42 14V34L24 44L6 34V14L24 4Z"/><line x1="24" y1="4" x2="24" y2="44"/><line x1="6" y1="14" x2="42" y2="14"/></svg>
+          <p class="cst-audience-title">3D Visualization</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Modellazione, rendering, ambienti immersivi.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Modelling, rendering, immersive environments.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Mod&eacute;lisation, rendu, environnements immersifs.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><rect x="4" y="8" width="16" height="12" rx="2"/><rect x="28" y="8" width="16" height="12" rx="2"/><rect x="4" y="28" width="16" height="12" rx="2"/><rect x="28" y="28" width="16" height="12" rx="2"/></svg>
+          <p class="cst-audience-title">Storyboard</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Narrazione visiva per pitch, gare e presentazioni.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Visual storytelling for pitches, tenders and presentations.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Narration visuelle pour pitchs, appels d&rsquo;offres et pr&eacute;sentations.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><polygon points="16,8 40,24 16,40"/><line x1="8" y1="8" x2="8" y2="40"/></svg>
+          <p class="cst-audience-title">Motion Design</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Animazioni, titoli, transizioni per video e presentazioni.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Animations, titles, transitions for video and presentations.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Animations, titres, transitions pour vid&eacute;os et pr&eacute;sentations.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M16 16C20 12 28 12 32 16"/><path d="M12 24C16 18 32 18 36 24"/><circle cx="24" cy="30" r="4"/></svg>
+          <p class="cst-audience-title">AI Video Production</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Video generati con intelligenza artificiale per pre-visualizzazione e contenuti.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">AI-generated video for pre-visualisation and content production.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Vid&eacute;os g&eacute;n&eacute;r&eacute;es par intelligence artificielle pour pr&eacute;visualisation et contenus.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 40 56" style="height:58px;"><circle cx="20" cy="5" r="3.5"/><line x1="20" y1="8.5" x2="20" y2="28"/><line x1="12" y1="14" x2="28" y2="14"/><path d="M16 28L10 50"/><path d="M24 28L30 50"/><path d="M14 16L16 28L24 28L26 16" style="stroke-dasharray:2 2;"/><line x1="10" y1="14" x2="8" y2="20"/><line x1="30" y1="14" x2="32" y2="20"/></svg>
+          <p class="cst-audience-title" data-i18n="cst-svc-costume" data-en="Costume Design &amp; Figurines" data-it="Figurini &amp; Costume Design" data-fr="Figurines &amp; Cr&eacute;ation de Costumes">Costume Design &amp; Figurines</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Figurini originali per artisti e performer dei tuoi eventi. Con il rigore e la qualit&agrave; del costume teatrale.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Original costume designs for the artists and performers of your events. With the rigour and quality of theatrical costume.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Figurines originaux pour les artistes et performers de vos &eacute;v&eacute;nements. Avec la rigueur et la qualit&eacute; du costume th&eacute;&acirc;tral.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><path d="M4 40L16 12L28 32L36 20L44 40"/><circle cx="36" cy="10" r="4"/></svg>
+          <p class="cst-audience-title" data-i18n="cst-svc-scenic" data-en="Scenic Illustration" data-it="Illustrazione Scenografica" data-fr="Illustration Sc&eacute;nographique">Scenic Illustration</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Bozzetti e tavole tecniche con linguaggio da studio di progettazione.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Sketches and technical boards with an architectural design studio approach.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Esquisses et planches techniques avec une approche de studio de conception.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><path d="M8 6H36C38 6 40 8 40 10V38C40 40 38 42 36 42H8V6Z"/><line x1="16" y1="14" x2="32" y2="14"/><line x1="16" y1="22" x2="32" y2="22"/><line x1="16" y1="30" x2="26" y2="30"/></svg>
+          <p class="cst-audience-title">Visual Storytelling</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Narrazione per immagini che trasforma un concept in un racconto visivo.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Image-driven narrative that transforms a concept into a visual story.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Narration par l&rsquo;image qui transforme un concept en r&eacute;cit visuel.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><circle cx="18" cy="20" r="12"/><circle cx="30" cy="20" r="12"/><circle cx="24" cy="32" r="12"/></svg>
+          <p class="cst-audience-title">Compositing &amp; Post-produzione</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Fotomontaggi, integrazioni, refinishing visivo.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Photomontage, integration, visual refinishing.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Photomontages, int&eacute;grations, finition visuelle.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <svg class="cst-icon" viewBox="0 0 48 48"><rect x="8" y="4" width="32" height="24" rx="3"/><line x1="16" y1="28" x2="16" y2="36"/><line x1="32" y1="28" x2="32" y2="36"/><line x1="10" y1="36" x2="38" y2="36"/><rect x="18" y="38" width="12" height="6" rx="2"/></svg>
+          <p class="cst-audience-title" data-i18n="cst-svc-digital" data-en="Digital Solutions for Events" data-it="Digital Solutions per Eventi" data-fr="Solutions Digitales pour &Eacute;v&eacute;nements">Digital Solutions for Events</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">App dedicate, landing page, piattaforme interattive al servizio dell&rsquo;evento.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Dedicated apps, landing pages, interactive platforms serving the event.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Applications d&eacute;di&eacute;es, pages web, plateformes interactives au service de l&rsquo;&eacute;v&eacute;nement.</p></div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2.5rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.06);">
+        <div data-lang-block="it"><p class="cst-sec-intro">Non sai ancora di cosa hai bisogno? Raccontaci il progetto. Noi ti proponiamo la soluzione.</p></div>
+        <div data-lang-block="en"><p class="cst-sec-intro">Not sure what you need yet? Tell us about the project. We&rsquo;ll propose the solution.</p></div>
+        <div data-lang-block="fr"><p class="cst-sec-intro">Vous ne savez pas encore ce dont vous avez besoin&nbsp;? Parlez-nous du projet. Nous vous proposerons la solution.</p></div>
+      </div>
+    </div>
+
+    <!-- ═══ CREATIVE FEASIBILITY ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-feasibility" data-en="Creative Feasibility" data-it="Creative Feasibility" data-fr="Creative Feasibility">Creative Feasibility</p>
+      <div data-lang-block="it"><p class="cst-sec-intro">Un&rsquo;idea ha valore solo se pu&ograve; prendere forma.</p></div>
+      <div data-lang-block="en"><p class="cst-sec-intro">An idea only has value if it can take shape.</p></div>
+      <div data-lang-block="fr"><p class="cst-sec-intro">Une id&eacute;e n&rsquo;a de valeur que si elle peut prendre forme.</p></div>
+      <div class="cst-feasibility-box">
+        <div data-lang-block="it"><p class="cst-sec-text">Hai un concept ma non sai se &egrave; realizzabile? Lo analizziamo e ti restituiamo una risposta concreta: fattibilit&agrave; tecnica, impatto visivo e una prima visualizzazione. Tu presenti al cliente con qualcosa di solido in mano.</p></div>
+        <div data-lang-block="en"><p class="cst-sec-text">Have a concept but not sure if it&rsquo;s feasible? We analyse it and give you a concrete answer: technical feasibility, visual impact and an initial visualisation. You present to the client with something solid in hand.</p></div>
+        <div data-lang-block="fr"><p class="cst-sec-text">Vous avez un concept mais vous ne savez pas s&rsquo;il est r&eacute;alisable&nbsp;? Nous l&rsquo;analysons et vous donnons une r&eacute;ponse concr&egrave;te&nbsp;: faisabilit&eacute; technique, impact visuel et une premi&egrave;re visualisation. Vous pr&eacute;sentez au client avec quelque chose de solide en main.</p></div>
+      </div>
+    </div>
+
+    <!-- ═══ A CHI CI RIVOLGIAMO ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-audience" data-en="Who We Work With" data-it="A Chi Ci Rivolgiamo" data-fr="&Agrave; Qui Nous Nous Adressons">Who We Work With</p>
+
+      <div class="cst-audience-grid">
+
+        <div class="cst-audience-card">
+          <p class="cst-audience-title" data-i18n="cst-aud-1" data-en="Event Agencies" data-it="Agenzie Eventi" data-fr="Agences &Eacute;v&eacute;nementielles">Event Agencies</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Concept visivi, storyboard e ambientazioni per i tuoi progetti e i tuoi pitch. Anche in white label totale.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">Visual concepts, storyboards and environments for your projects and pitches. Full white label available.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Concepts visuels, storyboards et mises en sc&egrave;ne pour vos projets et vos pitchs. En marque blanche totale.</p></div>
+        </div>
+
+        <div class="cst-audience-card">
+          <p class="cst-audience-title" data-i18n="cst-aud-4" data-en="Creative Directors" data-it="Direttori Creativi" data-fr="Directeurs Cr&eacute;atifs">Creative Directors</p>
+          <div data-lang-block="it"><p class="cst-audience-desc">Sviluppiamo l&rsquo;idea da zero, traducendo il concept in immagini forti da presentare a clienti o enti pubblici.</p></div>
+          <div data-lang-block="en"><p class="cst-audience-desc">We develop the idea from scratch, translating the concept into powerful visuals for client or public tender presentations.</p></div>
+          <div data-lang-block="fr"><p class="cst-audience-desc">Nous d&eacute;veloppons l&rsquo;id&eacute;e de z&eacute;ro, en traduisant le concept en images percutantes pour les pr&eacute;sentations clients ou les appels d&rsquo;offres publics.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ IL TEAM ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-team" data-en="The Team" data-it="Il Team" data-fr="L&rsquo;&Eacute;quipe">The Team</p>
+      <div data-lang-block="it"><p class="cst-sec-intro">Un team creativo, modulare e su misura. Al tuo servizio.</p></div>
+      <div data-lang-block="en"><p class="cst-sec-intro">A creative team &mdash; modular and tailor-made. At your service.</p></div>
+      <div data-lang-block="fr"><p class="cst-sec-intro">Une &eacute;quipe cr&eacute;ative, modulaire et sur mesure. &Agrave; votre service.</p></div>
+
+      <div class="artists-grid">
+        <div class="artist-cell">
+          <p class="artist-role-label">Concept Artist</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label" data-i18n="cst-role-illus" data-en="Illustrators" data-it="Illustratori" data-fr="Illustrateurs">Illustrators</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label">3D Artist</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label">Visual Designer</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label">Art Director</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label">Motion Designer</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label">AI Video Producer</p>
+        </div>
+        <div class="artist-cell">
+          <p class="artist-role-label" data-i18n="cst-role-costume" data-en="Costume Designer" data-it="Figurinista" data-fr="Cr&eacute;ateur de Costumes">Costume Designer</p>
+        </div>
+      </div>
+
+      <div class="cst-divider" style="margin-top:2.5rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.06);">
+        <div data-lang-block="it">
+          <p class="cst-sec-text">Ogni progetto ha un referente unico: <strong>Creative Strike Coordinator</strong></p>
+          <p style="font-family:var(--font-sans);font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(232,230,225,0.4);margin-top:0.8rem;">Lavoriamo in white label: senza logo, senza firma, al servizio della tua agenzia.</p>
+        </div>
+        <div data-lang-block="en">
+          <p class="cst-sec-text">Every project has a single point of contact: <strong>Creative Strike Coordinator</strong></p>
+          <p style="font-family:var(--font-sans);font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(232,230,225,0.4);margin-top:0.8rem;">We work white label: no logo, no signature, fully at your agency&rsquo;s service.</p>
+        </div>
+        <div data-lang-block="fr">
+          <p class="cst-sec-text">Chaque projet a un r&eacute;f&eacute;rent unique&nbsp;: <strong>Creative Strike Coordinator</strong></p>
+          <p style="font-family:var(--font-sans);font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(232,230,225,0.4);margin-top:0.8rem;">Nous travaillons en marque blanche&nbsp;: sans logo, sans signature, au service de votre agence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ COME LAVORIAMO ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-method" data-en="How We Work" data-it="Come Lavoriamo" data-fr="Comment Nous Travaillons">How We Work</p>
+      <div data-lang-block="it"><p class="cst-sec-intro">Metodo rapido, visivo e coordinato.</p></div>
+      <div data-lang-block="en"><p class="cst-sec-intro">Fast, visual, coordinated.</p></div>
+      <div data-lang-block="fr"><p class="cst-sec-intro">M&eacute;thode rapide, visuelle et coordonn&eacute;e.</p></div>
+
+      <div class="cst-steps">
+        <div class="cst-step">
+          <span class="cst-step-num">01</span>
+          <p class="cst-step-label" data-i18n="cst-s1" data-en="Quick Brief" data-it="Brief Rapido" data-fr="Brief Rapide">Quick Brief</p>
+        </div>
+        <div class="cst-step">
+          <span class="cst-step-num">02</span>
+          <p class="cst-step-label" data-i18n="cst-s2" data-en="Dedicated Team" data-it="Team Dedicato" data-fr="&Eacute;quipe D&eacute;di&eacute;e">Dedicated Team</p>
+        </div>
+        <div class="cst-step">
+          <span class="cst-step-num">03</span>
+          <p class="cst-step-label">Creative Strike Coordinator</p>
+        </div>
+        <div class="cst-step">
+          <span class="cst-step-num">04</span>
+          <p class="cst-step-label" data-i18n="cst-s4" data-en="Initial Sketch" data-it="Sketch Iniziale" data-fr="Esquisse Initiale">Initial Sketch</p>
+        </div>
+        <div class="cst-step">
+          <span class="cst-step-num">05</span>
+          <p class="cst-step-label" data-i18n="cst-s5" data-en="Custom Output" data-it="Output su Misura" data-fr="Livrable Sur Mesure">Custom Output</p>
+        </div>
+        <div class="cst-step">
+          <span class="cst-step-num">06</span>
+          <p class="cst-step-label" data-i18n="cst-s6" data-en="Ongoing Support" data-it="Supporto Continuo" data-fr="Accompagnement Continu">Ongoing Support</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ IMPATTO IN NUMERI ═══ -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="cst-impact" data-en="Our Impact in Numbers" data-it="Il Nostro Impatto in Numeri" data-fr="Notre Impact en Chiffres">Our Impact in Numbers</p>
+
+      <div class="cst-stats">
+        <div class="cst-stat">
+          <span class="cst-stat-num">+2000</span>
+          <p class="cst-stat-label" data-i18n="cst-n1" data-en="Hours saved for agencies" data-it="Ore risparmiate dalle agenzie" data-fr="Heures &eacute;conomis&eacute;es par les agences">Hours saved for agencies</p>
+        </div>
+        <div class="cst-stat">
+          <span class="cst-stat-num">+300</span>
+          <p class="cst-stat-label" data-i18n="cst-n2" data-en="Concepts turned into visuals" data-it="Concept trasformati in immagini" data-fr="Concepts transform&eacute;s en images">Concepts turned into visuals</p>
+        </div>
+        <div class="cst-stat">
+          <span class="cst-stat-num">5</span>
+          <p class="cst-stat-label" data-i18n="cst-n3" data-en="Agency teams supported" data-it="Team di agenzie affiancati" data-fr="&Eacute;quipes d&rsquo;agences accompagn&eacute;es">Agency teams supported</p>
+        </div>
+        <div class="cst-stat">
+          <span class="cst-stat-num">100%</span>
+          <p class="cst-stat-label" data-i18n="cst-n4" data-en="White label projects" data-it="Progetti in white label" data-fr="Projets en marque blanche">White label projects</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CTA ═══ -->
+    <div class="proj-sec reveal" style="text-align:center;border-bottom:none;padding:4rem 0;">
+      <div data-lang-block="it">
+        <p style="font-family:var(--font-serif);font-size:clamp(1.4rem,3.5vw,2.2rem);font-style:italic;line-height:1.5;color:#e8e6e1;margin-bottom:2.5rem;">Il tuo team creativo in white label<br>per trasformare ogni pitch<br>in un racconto visivo vincente.</p>
+      </div>
+      <div data-lang-block="en">
+        <p style="font-family:var(--font-serif);font-size:clamp(1.4rem,3.5vw,2.2rem);font-style:italic;line-height:1.5;color:#e8e6e1;margin-bottom:2.5rem;">Your white label creative team<br>to turn every pitch<br>into a winning visual story.</p>
+      </div>
+      <div data-lang-block="fr">
+        <p style="font-family:var(--font-serif);font-size:clamp(1.4rem,3.5vw,2.2rem);font-style:italic;line-height:1.5;color:#e8e6e1;margin-bottom:2.5rem;">Votre &eacute;quipe cr&eacute;ative en marque blanche<br>pour transformer chaque pitch<br>en un r&eacute;cit visuel gagnant.</p>
+      </div>
+      <div style="width:60px;height:1px;background:rgba(232,230,225,0.25);margin:0 auto 2.5rem;"></div>
+      <a href="mailto:creativestriketeam@libero.it" class="cst-cta" data-i18n="cst-contact" data-en="Contact Us" data-it="Contattaci" data-fr="Contactez-Nous">Contact Us</a>
+    </div>
+
+  </article>
+
+  <footer class="footer">
+    <p class="footer-copy">&copy; 2026 Cristian Taraborrelli Studio SRL &mdash; P.I. 17597231004</p>
+    <a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank" class="footer-link">Instagram &nearr;</a>
+  </footer>
+</main>
+<script src="js/main.js"></script>
+<script src="js/lang.js"></script>
+</body>
+</html>
