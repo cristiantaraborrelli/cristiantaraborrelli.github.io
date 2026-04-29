@@ -1,0 +1,64 @@
+EVENTO: REQUIEM PER EDITH STEIN (Balletto)
+LOCATION: Teatro dell'Opera di Roma
+DATA: 13, 15, 17, 18, 20, 22 febbraio 2001 (6 recite)
+ABBINAMENTO: rappresentato con l'opera "La Voix Humaine"
+FONTE: https://archiviostorico.operaroma.it/edizione_balletto/requiem-per-edith-stein-2001/
+
+NB: PAGINA NUOVA DA CREARE — non esiste sul sito attuale. L'utente la vuole IN EVIDENZA per:
+- la collaborazione con Carla Fracci (icona della danza italiana)
+- la regia di Beppe Menegatti (marito di Carla Fracci, regista storico)
+- il tema profondo di Edith Stein (filosofa, monaca carmelitana, martire ad Auschwitz, santa)
+
+CREATIVE TEAM:
+- Musica: Luciano Berio, Johann Sebastian Bach, Maurice Ravel (montaggio musicale)
+- Regia: Beppe Menegatti
+- Coreografia: Fabrizio Monteverde
+- Scene e Costumi: Cristian Taraborrelli
+- Direttore d'orchestra: Vittorio Parisi
+
+CAST:
+- Edith: Carla Fracci ★
+- La madre: Flavia Feliziani
+- Il padre: Andrea Costa
+- Edwige: Alessia Barberini
+- Baritono solista: Dario Solari
+- Voce recitante: Cosimo Manicone
+
+DOCUMENTAZIONE: 8 foto di scena disponibili nell'archivio (Carla Fracci/Edith), URL CDN base: operaroma-archiviostorico.b-cdn.net/
+
+SLUG SUGGERITO: theatre/requiem-edith-stein.html (oppure dance/requiem-edith-stein.html — valutare se serve nuova categoria "Dance/Ballet")
+
+CONTESTO STORICO E CULTURALE da arricchire:
+1. Edith Stein (1891-1942):
+   - Filosofa tedesca ebrea, allieva di Edmund Husserl (fenomenologia)
+   - Si converte al cattolicesimo, diventa monaca carmelitana scalza con il nome di Suor Teresa Benedetta della Croce
+   - Deportata e uccisa ad Auschwitz nel 1942
+   - Beatificata 1987 e canonizzata 1998 da Giovanni Paolo II
+   - Patrona d'Europa dal 1999
+
+2. Carla Fracci (1936-2021):
+   - "Étoile" assoluta, una delle più grandi ballerine del XX secolo
+   - Lunghissima collaborazione artistica con il marito Beppe Menegatti come regista
+   - Specializzata in ruoli drammatici dove la danza diventa narrazione
+
+3. Beppe Menegatti (1929-2020):
+   - Regista teatrale e d'opera, marito di Carla Fracci
+   - Sodalizio artistico cinquantennale con Fracci
+   - Estetica narrativa, attenzione a personaggi storici e letterari
+
+4. Fabrizio Monteverde:
+   - Coreografo italiano, lavora spesso con Junior Balletto di Toscana
+   - Stile fisico, drammaturgico, contemporaneo
+
+5. Luciano Berio (1925-2003):
+   - Compositore italiano avant-garde, Sequenza, Sinfonia, Voci
+
+CONTESTO STORICO della produzione:
+- Il balletto è del 2001, un anno dopo la canonizzazione di Edith Stein (1998) e a tre anni dalla sua proclamazione patrona d'Europa (1999)
+- Il tema integra storia ebraica, fenomenologia, mistica cristiana, Olocausto
+
+COSA L'UTENTE VUOLE IN EVIDENZA:
+- Sezione dedicata a Edith Stein (la filosofa-santa)
+- Sezione dedicata a Carla Fracci (l'étoile)
+- Mini-profilo Beppe Menegatti
+- I costumi (= il vero contributo di Cristian, oltre alle scene) — chiedere foto di figurini se possibile

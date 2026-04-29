@@ -1,0 +1,30 @@
+PLANETARIA — Discorsi con la Terra (PRIMA EDIZIONE 2024)
+LOCATION: Teatro della Pergola, Firenze
+DATA: 7-9 giugno 2024 (durata 3 giorni)
+
+⚠️ AGGIORNAMENTO IMPORTANTE per pagina theatre/planetaria.html:
+La pagina attuale del sito è per la SECONDA edizione 2025. Va arricchita aggiungendo dati sulla PRIMA edizione 2024.
+
+PRIMA EDIZIONE 2024 — DATI:
+- Ideatori: Stefano Accorsi e Filippo Gentili
+- Regia e Idea Scenica: Cristian Taraborrelli
+- Tema: Discorsi con la Terra — fusione di scienza, arte, spettacolo
+- Obiettivo: sensibilizzare sul cambiamento climatico e rispetto per la natura
+
+RISULTATI 2024:
+- Oltre 3500 presenze
+- 30 eventi
+- ~40 protagonisti tra attori, scienziati, divulgatori
+
+CONTRIBUTO DI CRISTIAN:
+"ruolo fondamentale nella creazione dell'identità visiva e scenica dell'evento"
+
+FONTI:
+- Askanews
+- Instagram Planetaria Festival
+- Planetaria Festival 2025 (sito ufficiale)
+
+LA PAGINA HTML ATTUALE (theatre/planetaria.html) deve essere aggiornata aggiungendo:
+- Sezione "Prima Edizione 2024" con date 7-9 giugno, risultati (3500 presenze, 30 eventi, 40 protagonisti)
+- Riferimento al fatto che Cristian ha CREATO l'identità visiva e scenica fin dalla prima edizione
+- Sezione "Le Edizioni" con timeline 2024 + 2025
