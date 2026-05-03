@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmazione | Cristian Taraborrelli Studio</title>
+  <meta name="description" content="Soluzioni software su commissione per il mondo degli eventi e della comunicazione. emailho.me, parla.me, app eventi e gestionali custom.">
+  <meta name="keywords" content="software events, gestionale eventi, app eventi, emailho.me, parla.me, custom software, event management software, software per agenzie creative, app per eventi live, gestionale email team, white label software, Cristian Taraborrelli Studio, programmazione, digital tools">
+  <meta name="author" content="Cristian Taraborrelli Studio">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.cristiantaraborrellistudio.net/programmazione.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programmazione | Cristian Taraborrelli Studio">
+  <meta property="og:description" content="Software su commissione per il mondo degli eventi. emailho.me, parla.me, app eventi e gestionali custom.">
+  <meta property="og:url" content="https://www.cristiantaraborrellistudio.net/programmazione.html">
+  <meta property="og:site_name" content="Cristian Taraborrelli Studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programmazione | Cristian Taraborrelli Studio">
+  <meta name="twitter:description" content="Software su commissione per il mondo degli eventi. emailho.me, parla.me, app eventi e gestionali custom.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Programmazione — Software & Digital Tools",
+    "provider": {
+      "@type": "Organization",
+      "name": "Cristian Taraborrelli Studio",
+      "url": "https://www.cristiantaraborrellistudio.net"
+    },
+    "description": "Soluzioni software su commissione per il mondo degli eventi e della comunicazione professionale. Prodotti: emailho.me, parla.me. Servizi: app eventi, gestionali, piattaforme custom, tool di comunicazione white label.",
+    "areaServed": "Worldwide",
+    "serviceType": "Custom Software Development for Events and Communication"
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Programmazione — pagina prodotti software */
+    .prog-hero {
+      padding: 6rem 2rem 3rem; max-width: 1200px; margin: 0 auto;
+    }
+    .prog-hero-cat {
+      font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+    }
+    .prog-hero-title {
+      font-family: var(--font-title); font-size: clamp(2.6rem, 6vw, 4.5rem);
+      text-transform: uppercase; letter-spacing: 0.03em; line-height: 1;
+      margin-bottom: 1.2rem; color: var(--ink);
+    }
+    .prog-hero-tagline {
+      font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      font-style: italic; line-height: 1.5; color: var(--ink2);
+      max-width: 720px; margin-bottom: 1.5rem;
+    }
+
+    /* Product cards */
+    .prog-products {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem; margin-top: 2rem;
+    }
+    .prog-card {
+      border: 1px solid var(--line); border-radius: 14px; padding: 2.2rem 2rem;
+      background: var(--bg2, rgba(0,0,0,0.02)); transition: transform .3s, border-color .3s;
+      display: flex; flex-direction: column;
+    }
+    .prog-card:hover { transform: translateY(-4px); border-color: var(--ink2); }
+    .prog-card-tag {
+      font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem;
+    }
+    .prog-card-name {
+      font-family: var(--font-title); font-size: 1.8rem; letter-spacing: 0.02em;
+      margin-bottom: 0.6rem; color: var(--ink);
+    }
+    .prog-card-claim {
+      font-family: var(--font-serif); font-style: italic; font-size: 1rem;
+      color: var(--ink2); margin-bottom: 1.2rem; line-height: 1.5;
+    }
+    .prog-card-desc {
+      font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.7;
+      color: var(--ink2); margin-bottom: 1rem;
+    }
+    .prog-card-feat {
+      font-family: var(--font-sans); font-size: 0.82rem; line-height: 1.7;
+      color: var(--ink2); margin-bottom: 1.2rem; padding-left: 0; list-style: none;
+    }
+    .prog-card-feat li { padding-left: 1.2rem; position: relative; margin-bottom: 0.3rem; }
+    .prog-card-feat li:before {
+      content: "›"; position: absolute; left: 0; top: 0; color: var(--muted);
+    }
+    .prog-card-cta {
+      margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .prog-card-link {
+      display: inline-block; font-family: var(--font-sans); font-size: 0.85rem;
+      letter-spacing: 0.08em; text-transform: uppercase; padding: 0.7rem 1.2rem;
+      border: 1px solid var(--ink); color: var(--ink); text-decoration: none;
+      transition: background .2s, color .2s; text-align: center;
+    }
+    .prog-card-link:hover { background: var(--ink); color: var(--bg, #fff); }
+    .prog-card-promo {
+      font-family: var(--font-sans); font-size: 0.75rem; color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .prog-card-promo code {
+      background: rgba(0,0,0,0.06); padding: 0.15rem 0.45rem; border-radius: 4px;
+      font-family: 'Courier New', monospace; color: var(--ink); letter-spacing: 0.1em;
+    }
+    .prog-card-todo {
+      font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #c08040; border: 1px dashed #c08040;
+      padding: 0.4rem 0.7rem; border-radius: 4px; display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    /* Service grid (software on commission) */
+    .prog-services {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 1.5rem;
+    }
+    .prog-service {
+      border-left: 2px solid var(--muted2); padding: 0.5rem 0 0.5rem 1.5rem;
+    }
+    .prog-service-title {
+      font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600;
+      color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.01em;
+    }
+    .prog-service-desc {
+      font-family: var(--font-serif); font-size: 0.92rem; line-height: 1.6;
+      color: var(--ink2);
+    }
+
+    /* Approach manifesto */
+    .prog-approach {
+      max-width: 760px; margin: 0 auto; padding: 1rem 0;
+    }
+    .prog-approach p {
+      font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.8;
+      color: var(--ink2); margin-bottom: 1.2rem;
+    }
+    .prog-approach .lead {
+      font-style: italic; font-size: 1.3rem; color: var(--ink); margin-bottom: 2rem;
+      border-left: 3px solid var(--ink); padding-left: 1.5rem;
+    }
+
+    /* Contact */
+    .prog-contact {
+      text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+    .prog-contact-label {
+      font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+    }
+    .prog-contact-mail {
+      font-family: var(--font-title); font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+      border-bottom: 1px solid var(--ink); padding-bottom: 0.2rem;
+    }
+    .prog-contact-mail:hover { color: var(--muted); border-color: var(--muted); }
+    .prog-contact-note {
+      font-family: var(--font-serif); font-size: 0.95rem; color: var(--ink2);
+      margin-top: 1.2rem; max-width: 560px; margin-left: auto; margin-right: auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">CRISTIANTARABORRELLI<strong>STUDIO</strong>&reg;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Gallery</a></li>
+    <li class="nav-item">
+      <a href="#">Opera</a>
+      <ul class="nav-dropdown">
+        <li><a href="theatre/turandot.html">Turandot</a></li>
+        <li><a href="theatre/macbeth.html">Macbeth</a></li>
+        <li><a href="theatre/pagliacci.html">Pagliacci &mdash; AR Breaks into Opera</a></li>
+        <li><a href="theatre/belle-helene.html">La Belle H&eacute;l&egrave;ne</a></li>
+        <li><a href="theatre/pietra-del-paragone.html">La Pietra del Paragone</a></li>
+        <li><a href="theatre/due-foscari.html">I Due Foscari</a></li>
+        <li><a href="theatre/elisir-damore.html">L'Elisir d'Amore</a></li>
+        <li><a href="theatre/don-carlos.html">Don Carlos</a></li>
+        <li><a href="theatre/luisa-miller.html">Luisa Miller</a></li>
+        <li><a href="theatre/sonnambula.html">La Sonnambula (Roma)</a></li>
+        <li><a href="theatre/sonnambula-ancona.html">La Sonnambula (Ancona)</a></li>
+        <li><a href="theatre/marie-galante.html">Marie Galante</a></li>
+        <li><a href="theatre/medea.html">Medea</a></li>
+        <li><a href="theatre/requiem-edith-stein.html">Requiem per Edith Stein</a></li>
+        <li><a href="theatre/opera-de-quatsous.html">L'Opera de Quat'Sous</a></li>
+        <li><a href="theatre/la-jura.html">La Jura</a></li>
+        <li><a href="theatre/colore-del-sole.html">Il Colore del Sole</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Teatro</a>
+      <ul class="nav-dropdown">
+        <li><a href="theatre/planetaria.html">Planetaria</a></li>
+        <li><a href="theatre/don-giovanni.html">Don Giovanni (Dom Juan)</a></li>
+        <li><a href="theatre/on-ne-pais-pas.html">On Ne Pais Pas</a></li>
+        <li><a href="theatre/mariage-de-figaro.html">Le Mariage de Figaro</a></li>
+        <li><a href="theatre/kurtag.html">Frammenti &mdash; Kurt&aacute;g</a></li>
+        <li><a href="theatre/processo-kafka.html">Il Processo di Kafka</a></li>
+        <li><a href="theatre/gertrude-le-cri.html">Gertrude (Le Cri)</a></li>
+        <li><a href="theatre/variazioni-cielo.html">Variazioni sul Cielo</a></li>
+        <li><a href="theatre/angelica-cunta.html">Angelica Cunta</a></li>
+        <li><a href="theatre/munchhausen.html">Munchhausen?</a></li>
+        <li><a href="theatre/ventrosoleil.html">Ventrosoleil</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Events</a>
+      <ul class="nav-dropdown">
+        <li><a href="events/amway-meraviglioso.html">Amway China — Meraviglioso</a></li>
+        <li><a href="events/sangeet-villa-gastel.html">Sangeet — Villa Gastel</a></li>
+        <li><a href="events/expo-roma-2030-paris.html">Expo Roma 2030 in Paris</a></li>
+        <li><a href="events/iveco.html">Iveco — Connecting Dots</a></li>
+        <li><a href="events/expo-roma-2030.html">Expo Roma 2030</a></li>
+        <li><a href="events/nido.html">Nido</a></li>
+        <li><a href="events/opera-illumina-natale.html">L'Opera Illumina il Natale</a></li>
+        <li><a href="events/moda-e-modi.html">Moda e Modi</a></li>
+        <li><a href="events/ncb-convention.html">NCB Convention</a></li>
+        <li><a href="events/balance.html">Balance</a></li>
+        <li><a href="events/intercoiffure.html">Intercoiffure</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Ceremonies</a>
+      <ul class="nav-dropdown">
+        <li><a href="ceremonies/italian-souvenir.html">Italian Souvenir</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Museums</a>
+      <ul class="nav-dropdown">
+        <li><a href="museums/citta-bambini.html">Citta dei Bambini e dei Ragazzi</a></li>
+        <li><a href="museums/acquario-meraviglie.html">L'Acquario delle Nuove Meraviglie</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Parks</a>
+      <ul class="nav-dropdown">
+        <li><a href="parks/regno-di-natale.html">Il Regno di Natale</a></li>
+        <li><a href="parks/italia-miniatura.html">Italia in Miniatura</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="creative-strike-team.html">Creative Strike Team</a></li>
+    <li><a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank">Instagram</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<main class="page">
+  <a href="index.html" class="back-link" data-i18n="back-link" data-en="All works" data-it="Tutti i lavori" data-fr="Toutes les &oelig;uvres">Tutti i lavori</a>
+
+  <!-- HERO -->
+  <section class="prog-hero reveal">
+    <p class="prog-hero-cat" data-i18n="hero-cat" data-en="Studio · Software &amp; Digital Tools" data-it="Studio · Software &amp; Strumenti Digitali" data-fr="Studio · Logiciels &amp; Outils Num&eacute;riques">Studio · Software &amp; Strumenti Digitali</p>
+    <h1 class="prog-hero-title" data-i18n="hero-title" data-en="Software &amp; Digital Tools" data-it="Programmazione" data-fr="Programmation">Programmazione</h1>
+    <p class="prog-hero-tagline" data-i18n="hero-tagline" data-en="Digital solutions for the world of live events and professional communication." data-it="Soluzioni digitali per il mondo degli eventi e della comunicazione professionale." data-fr="Solutions num&eacute;riques pour le monde des &eacute;v&eacute;nements live et de la communication professionnelle.">Soluzioni digitali per il mondo degli eventi e della comunicazione professionale.</p>
+  </section>
+
+  <article class="proj-body">
+
+    <!-- INTRO -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-intro" data-en="The Studio extends into code" data-it="Lo studio entra nel codice" data-fr="Le studio s'&eacute;tend au code">Lo studio entra nel codice</p>
+      <div class="prog-approach">
+        <div data-lang-block="it">
+          <p class="lead">Lo Studio Cristian Taraborrelli ha esteso le proprie competenze al digitale: oggi sviluppa software su commissione per agenzie, studi creativi e organizzatori di eventi.</p>
+          <p>L'approccio &egrave; lo stesso che applichiamo da vent'anni alla scenografia: <strong>intelligibilit&agrave;, dramma, esperienza utente</strong>. Un software, come una scena, deve raccontare qualcosa &mdash; deve avere ritmo, gerarchia, una soglia chiara tra ci&ograve; che il pubblico vede e ci&ograve; che accade dietro le quinte.</p>
+          <p>Lavoriamo in team con sviluppatori senior, designer di interfaccia e specialisti di sicurezza. I nostri prodotti nascono dall'osservazione concreta dei flussi di lavoro nel mondo dell'evento live: dove si perde tempo, dove si perdono informazioni, dove la comunicazione si rompe.</p>
+        </div>
+        <div data-lang-block="en">
+          <p class="lead">Cristian Taraborrelli Studio has extended its expertise to the digital realm: today it develops custom software for agencies, creative studios and event organizers.</p>
+          <p>The approach is the same one we have applied to scenography for twenty years: <strong>clarity, drama, user experience</strong>. Software, like a stage, has to tell something &mdash; it has to have rhythm, hierarchy, a clear threshold between what the audience sees and what happens behind the scenes.</p>
+          <p>We work in teams with senior developers, interface designers and security specialists. Our products are born from the concrete observation of workflows in the live-event world: where time is lost, where information is lost, where communication breaks down.</p>
+        </div>
+        <div data-lang-block="fr">
+          <p class="lead">Le Studio Cristian Taraborrelli a &eacute;tendu ses comp&eacute;tences au num&eacute;rique : il d&eacute;veloppe aujourd'hui des logiciels sur commande pour agences, studios cr&eacute;atifs et organisateurs d'&eacute;v&eacute;nements.</p>
+          <p>L'approche est la m&ecirc;me que nous appliquons depuis vingt ans &agrave; la sc&eacute;nographie : <strong>intelligibilit&eacute;, drame, exp&eacute;rience utilisateur</strong>. Un logiciel, comme une sc&egrave;ne, doit raconter quelque chose &mdash; il doit avoir un rythme, une hi&eacute;rarchie, un seuil clair entre ce que le public voit et ce qui se passe en coulisses.</p>
+          <p>Nous travaillons en &eacute;quipe avec des d&eacute;veloppeurs seniors, des designers d'interface et des sp&eacute;cialistes en s&eacute;curit&eacute;. Nos produits naissent de l'observation concr&egrave;te des flux de travail dans le monde de l'&eacute;v&eacute;nement live : o&ugrave; l'on perd du temps, o&ugrave; l'on perd des informations, o&ugrave; la communication se rompt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- I NOSTRI PRODOTTI -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-products" data-en="Our Products" data-it="I nostri prodotti" data-fr="Nos produits">I nostri prodotti</p>
+
+      <div class="prog-products">
+
+        <!-- emailho.me -->
+        <div class="prog-card">
+          <p class="prog-card-tag" data-i18n="emh-tag" data-en="Live · Team Email" data-it="Live · Email per Team" data-fr="Live · Email pour &Eacute;quipe">Live · Email per Team</p>
+          <h3 class="prog-card-name">emailho.me</h3>
+          <p class="prog-card-claim" data-i18n="emh-claim" data-en="The team email manager that turns chaotic threads into a visual timeline." data-it="Il gestionale email che trasforma i thread caotici in una timeline visiva." data-fr="Le gestionnaire d'emails qui transforme les fils chaotiques en chronologie visuelle.">Il gestionale email che trasforma i thread caotici in una timeline visiva.</p>
+
+          <div data-lang-block="it">
+            <p class="prog-card-desc">Crei una <strong>&laquo;stanza&raquo;</strong> con un indirizzo email dedicato. Metti quell'indirizzo in CC nei thread di lavoro e tutto il team vede in tempo reale, su una timeline visiva, l'intera conversazione &mdash; chi ha risposto, quando, cosa.</p>
+            <ul class="prog-card-feat">
+              <li>Stanze condivise con indirizzo dedicato</li>
+              <li>Timeline visiva di ogni thread</li>
+              <li>Crittografia AES-256 end-to-end</li>
+              <li>Server in Unione Europea, conformit&agrave; GDPR</li>
+              <li>Nessun plugin, nessun client da installare</li>
+            </ul>
+          </div>
+          <div data-lang-block="en">
+            <p class="prog-card-desc">You create a <strong>&laquo;room&raquo;</strong> with a dedicated email address. Put that address in CC on work threads and the whole team sees, in real time on a visual timeline, the entire conversation &mdash; who replied, when, what.</p>
+            <ul class="prog-card-feat">
+              <li>Shared rooms with dedicated address</li>
+              <li>Visual timeline for every thread</li>
+              <li>AES-256 end-to-end encryption</li>
+              <li>EU-based servers, GDPR compliant</li>
+              <li>No plugin, no client to install</li>
+            </ul>
+          </div>
+          <div data-lang-block="fr">
+            <p class="prog-card-desc">Vous cr&eacute;ez une <strong>&laquo;salle&raquo;</strong> avec une adresse email d&eacute;di&eacute;e. Mettez cette adresse en copie de vos fils de travail et toute l'&eacute;quipe voit en temps r&eacute;el, sur une chronologie visuelle, l'ensemble de la conversation &mdash; qui a r&eacute;pondu, quand, quoi.</p>
+            <ul class="prog-card-feat">
+              <li>Salles partag&eacute;es avec adresse d&eacute;di&eacute;e</li>
+              <li>Chronologie visuelle pour chaque fil</li>
+              <li>Chiffrement AES-256 de bout en bout</li>
+              <li>Serveurs en Union Europ&eacute;enne, conforme RGPD</li>
+              <li>Aucun plugin, aucun client &agrave; installer</li>
+            </ul>
+          </div>
+
+          <div class="prog-card-cta">
+            <a href="https://emailho.me" target="_blank" rel="noopener" class="prog-card-link" data-i18n="emh-link" data-en="Try emailho.me ↗" data-it="Prova emailho.me ↗" data-fr="Essayer emailho.me ↗">Prova emailho.me ↗</a>
+            <p class="prog-card-promo" data-i18n="emh-promo" data-en="Promo code <code>PRODUCTHUNT</code> · 30 days free Pro" data-it="Codice promo <code>PRODUCTHUNT</code> · 30 giorni gratis Pro" data-fr="Code promo <code>PRODUCTHUNT</code> · 30 jours Pro offerts">Codice promo <code>PRODUCTHUNT</code> · 30 giorni gratis Pro</p>
+          </div>
+        </div>
+
+        <!-- parla.me -->
+        <div class="prog-card">
+          <p class="prog-card-tag" data-i18n="prl-tag" data-en="Live · Communication" data-it="Live · Comunicazione" data-fr="Live · Communication">Live · Comunicazione</p>
+          <h3 class="prog-card-name">parla.me</h3>
+          <p class="prog-card-claim" data-i18n="prl-claim" data-en="A new way to talk &mdash; coming soon." data-it="Un nuovo modo di parlare &mdash; in arrivo." data-fr="Une nouvelle fa&ccedil;on de parler &mdash; bient&ocirc;t.">Un nuovo modo di parlare &mdash; in arrivo.</p>
+
+          <div data-lang-block="it">
+            <p class="prog-card-desc">Il secondo prodotto dello Studio nel campo della comunicazione digitale. Stessa filosofia di emailho.me: ridurre il rumore, restituire chiarezza, mettere il dialogo al centro.</p>
+            <p class="prog-card-desc"><em>Descrizione completa in arrivo.</em></p>
+          </div>
+          <div data-lang-block="en">
+            <p class="prog-card-desc">The Studio's second product in the field of digital communication. Same philosophy as emailho.me: reduce noise, restore clarity, put dialogue back at the centre.</p>
+            <p class="prog-card-desc"><em>Full description coming soon.</em></p>
+          </div>
+          <div data-lang-block="fr">
+            <p class="prog-card-desc">Le deuxi&egrave;me produit du Studio dans le domaine de la communication num&eacute;rique. M&ecirc;me philosophie qu'emailho.me : r&eacute;duire le bruit, restituer la clart&eacute;, remettre le dialogue au centre.</p>
+            <p class="prog-card-desc"><em>Description compl&egrave;te &agrave; venir.</em></p>
+          </div>
+
+          <div class="prog-card-cta">
+            <a href="https://parla.me" target="_blank" rel="noopener" class="prog-card-link" data-i18n="prl-link" data-en="Visit parla.me ↗" data-it="Vai su parla.me ↗" data-fr="Aller sur parla.me ↗">Vai su parla.me ↗</a>
+            <span class="prog-card-todo">TODO · Descrizione da completare</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SOFTWARE SU COMMISSIONE -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-commission" data-en="Software on Commission" data-it="Software su commissione" data-fr="Logiciels sur commande">Software su commissione</p>
+
+      <div style="max-width:720px;margin-bottom:2rem;">
+        <div data-lang-block="it">
+          <p style="font-family:var(--font-serif);font-size:1.05rem;line-height:1.8;color:var(--ink2);">Sviluppiamo prodotti digitali su misura per chi opera nel mondo dell'evento, della comunicazione e dell'industria creativa. Ogni progetto parte da un'analisi del flusso di lavoro reale del cliente &mdash; non da un template.</p>
+        </div>
+        <div data-lang-block="en">
+          <p style="font-family:var(--font-serif);font-size:1.05rem;line-height:1.8;color:var(--ink2);">We develop bespoke digital products for those who work in the world of events, communication and the creative industry. Every project starts with an analysis of the client's actual workflow &mdash; not from a template.</p>
+        </div>
+        <div data-lang-block="fr">
+          <p style="font-family:var(--font-serif);font-size:1.05rem;line-height:1.8;color:var(--ink2);">Nous d&eacute;veloppons des produits num&eacute;riques sur mesure pour ceux qui travaillent dans l'&eacute;v&eacute;nement, la communication et l'industrie cr&eacute;ative. Chaque projet part d'une analyse du flux de travail r&eacute;el du client &mdash; non d'un mod&egrave;le.</p>
+        </div>
+      </div>
+
+      <div class="prog-services">
+
+        <div class="prog-service">
+          <p class="prog-service-title" data-i18n="srv-app-t" data-en="Event Apps" data-it="App eventi" data-fr="Applications &eacute;v&eacute;nementielles">App eventi</p>
+          <p class="prog-service-desc" data-i18n="srv-app-d" data-en="Manage registrations, communications and live documentation. Mobile-first, designed for the actual rhythm of an event." data-it="Per gestire registrazioni, comunicazioni e documentazione live. Mobile-first, progettate sul ritmo reale di un evento." data-fr="Pour g&eacute;rer inscriptions, communications et documentation en direct. Mobile-first, con&ccedil;ues sur le rythme r&eacute;el d'un &eacute;v&eacute;nement.">Per gestire registrazioni, comunicazioni e documentazione live. Mobile-first, progettate sul ritmo reale di un evento.</p>
+        </div>
+
+        <div class="prog-service">
+          <p class="prog-service-title" data-i18n="srv-mgmt-t" data-en="Agency Management Tools" data-it="Gestionali per agenzie" data-fr="Gestion pour agences">Gestionali per agenzie</p>
+          <p class="prog-service-desc" data-i18n="srv-mgmt-d" data-en="Projects, suppliers, internal workflows. Replace stitched-together spreadsheets with one clear interface." data-it="Progetti, fornitori, flussi di lavoro interni. Sostituiamo i fogli di calcolo cuciti insieme con un'unica interfaccia chiara." data-fr="Projets, fournisseurs, flux de travail internes. On remplace les feuilles de calcul cousues ensemble par une interface unique et claire.">Progetti, fornitori, flussi di lavoro interni. Sostituiamo i fogli di calcolo cuciti insieme con un'unica interfaccia chiara.</p>
+        </div>
+
+        <div class="prog-service">
+          <p class="prog-service-title" data-i18n="srv-plat-t" data-en="Custom Platforms" data-it="Piattaforme custom" data-fr="Plateformes sur mesure">Piattaforme custom</p>
+          <p class="prog-service-desc" data-i18n="srv-plat-d" data-en="Ticketing, internal communication, broadcasting. Built around your audience, your brand and your operational reality." data-it="Ticketing, comunicazione interna, broadcasting. Costruite attorno al pubblico, al brand e alla realt&agrave; operativa del cliente." data-fr="Billetterie, communication interne, broadcasting. Construites autour du public, de la marque et de la r&eacute;alit&eacute; op&eacute;rationnelle du client.">Ticketing, comunicazione interna, broadcasting. Costruite attorno al pubblico, al brand e alla realt&agrave; operativa del cliente.</p>
+        </div>
+
+        <div class="prog-service">
+          <p class="prog-service-title" data-i18n="srv-comm-t" data-en="Communication Tools (white label)" data-it="Tool di comunicazione (white label)" data-fr="Outils de communication (marque blanche)">Tool di comunicazione (white label)</p>
+          <p class="prog-service-desc" data-i18n="srv-comm-d" data-en="The emailho.me engine adapted to a client's brand, domain and workflow. The product, in your colours." data-it="Il motore di emailho.me adattato al brand, al dominio e al workflow del cliente. Il prodotto, nei tuoi colori." data-fr="Le moteur d'emailho.me adapt&eacute; &agrave; la marque, au domaine et au workflow du client. Le produit, &agrave; vos couleurs.">Il motore di emailho.me adattato al brand, al dominio e al workflow del cliente. Il prodotto, nei tuoi colori.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- APPROCCIO -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-approach" data-en="Our Approach" data-it="Il nostro approccio" data-fr="Notre approche">Il nostro approccio</p>
+      <div class="prog-approach">
+        <div data-lang-block="it">
+          <p class="lead">Scriviamo software con la stessa cura con cui costruiamo una scenografia.</p>
+          <p>Una scena teatrale, quando funziona, &egrave; sintesi: ogni elemento &egrave; lì perch&eacute; serve a raccontare. Niente decorazione gratuita, niente complicazione che non aggiunga significato. <strong>Lo stesso vale per un'interfaccia.</strong></p>
+          <p>Per questo i nostri prodotti hanno poche schermate, gerarchie chiare, e un linguaggio visivo che il cliente riconosce al primo sguardo. La complessit&agrave; rimane sotto, nel codice, nella sicurezza, nella robustezza. La superficie rimane leggibile.</p>
+          <p>Lavoriamo per cicli brevi, con prototipi visibili sin dalla seconda settimana. Il committente vede crescere il prodotto giorno dopo giorno &mdash; come si vede crescere una scena al laboratorio.</p>
+        </div>
+        <div data-lang-block="en">
+          <p class="lead">We write software with the same care with which we build a stage.</p>
+          <p>A theatrical scene, when it works, is synthesis: every element is there because it serves the story. No gratuitous decoration, no complication that does not add meaning. <strong>The same is true for an interface.</strong></p>
+          <p>That is why our products have few screens, clear hierarchies, and a visual language the client recognizes at first glance. The complexity stays underneath, in the code, in the security, in the robustness. The surface stays readable.</p>
+          <p>We work in short cycles, with visible prototypes from the second week onwards. The client sees the product grow day by day &mdash; the way you watch a set being built in the workshop.</p>
+        </div>
+        <div data-lang-block="fr">
+          <p class="lead">Nous &eacute;crivons du logiciel avec le m&ecirc;me soin qu'une sc&eacute;nographie.</p>
+          <p>Une sc&egrave;ne th&eacute;&acirc;trale, lorsqu'elle fonctionne, est synth&egrave;se : chaque &eacute;l&eacute;ment est l&agrave; parce qu'il sert le r&eacute;cit. Aucune d&eacute;coration gratuite, aucune complication qui n'ajoute de sens. <strong>Il en va de m&ecirc;me pour une interface.</strong></p>
+          <p>C'est pourquoi nos produits ont peu d'&eacute;crans, des hi&eacute;rarchies claires, et un langage visuel que le client reconna&icirc;t au premier regard. La complexit&eacute; reste en dessous, dans le code, la s&eacute;curit&eacute;, la robustesse. La surface reste lisible.</p>
+          <p>Nous travaillons par cycles courts, avec des prototypes visibles d&egrave;s la deuxi&egrave;me semaine. Le commanditaire voit le produit grandir jour apr&egrave;s jour &mdash; comme on voit grandir un d&eacute;cor &agrave; l'atelier.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTATTO -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-contact" data-en="Contact" data-it="Contatto" data-fr="Contact">Contatto</p>
+      <div class="prog-contact">
+        <p class="prog-contact-label" data-i18n="contact-lbl" data-en="Project enquiries" data-it="Richieste progetto" data-fr="Demandes de projet">Richieste progetto</p>
+        <a href="mailto:creativestriketeam@libero.it" class="prog-contact-mail">creativestriketeam@libero.it</a>
+        <p class="prog-contact-note" data-i18n="contact-note" data-en="Write to us with a brief description of the workflow you would like to digitize. We reply within 48 hours with a first feasibility note." data-it="Scrivici con una breve descrizione del flusso che vorresti digitalizzare. Rispondiamo entro 48 ore con una prima nota di fattibilit&agrave;." data-fr="&Eacute;crivez-nous avec une br&egrave;ve description du flux que vous souhaiteriez num&eacute;riser. Nous r&eacute;pondons sous 48 heures par une premi&egrave;re note de faisabilit&eacute;.">Scrivici con una breve descrizione del flusso che vorresti digitalizzare. Rispondiamo entro 48 ore con una prima nota di fattibilit&agrave;.</p>
+      </div>
+    </div>
+
+    <!-- TAGS -->
+    <div class="proj-sec reveal">
+      <p class="s-label" data-i18n="s-tags" data-en="Tags" data-it="Tag" data-fr="Tags">Tags</p>
+      <div class="tags-row">
+        <span class="tag">Software</span><span class="tag">emailho.me</span><span class="tag">parla.me</span><span class="tag">Event Apps</span><span class="tag">Custom Software</span><span class="tag">White Label</span><span class="tag">Gestionali</span><span class="tag">Ticketing</span><span class="tag">GDPR</span><span class="tag">AES-256</span><span class="tag">EU Servers</span><span class="tag">Digital Tools</span><span class="tag">Live Events</span><span class="tag">Communication</span><span class="tag">UX Design</span>
+      </div>
+    </div>
+
+  </article>
+
+  <footer class="footer">
+    <p class="footer-copy">© 2026 Cristian Taraborrelli Studio SRL — P.I. 17597231004</p>
+    <a href="https://www.instagram.com/cristiantaraborrelli.director/" target="_blank" class="footer-link">Instagram ↗</a>
+  </footer>
+</main>
+<script src="js/main.js"></script>
+<script src="js/lang.js"></script>
+</body>
+</html>
