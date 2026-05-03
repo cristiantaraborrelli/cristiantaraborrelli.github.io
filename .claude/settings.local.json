@@ -78,7 +78,9 @@
       "WebFetch(domain:www.starck.com)",
       "WebFetch(domain:bureaubetak.com)",
       "WebFetch(domain:esdevlin.com)",
-      "WebFetch(domain:www.ilgiornaledellarte.com)"
+      "WebFetch(domain:www.ilgiornaledellarte.com)",
+      "WebFetch(domain:www.villaeugenie.com)",
+      "WebFetch(domain:en.wikipedia.org)"
     ]
   }
 }
