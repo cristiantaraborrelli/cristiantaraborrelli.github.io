@@ -9,13 +9,13 @@ L'utente ha fornito 5 fonti ufficiali (klpteatro/gbopera Scala, resmusica, mundo
 | 1 | Turandot | Scala / klpteatro / gbopera | ✅ Costumi joint Corsetti+CT aggiunti |
 | 2 | Macbeth costumi | Scala / gbopera / sipario | ✅ Costumi joint CT+Buscemi |
 | 3 | Macbeth crew | Scala / gbopera | ✅ Kebour, Boitel, Attilii, Morandi aggiunti |
-| 4 | Don Carlos scene | (da verificare locandina Mariinsky) | ⏳ pending |
+| 4 | Don Carlos scene | mariinsky.ru | ✅ Sito già coerente con locandina (joint Corsetti+CT) |
 | 5 | Falstaff | resmusica | ✅ Scene/Costumi separati, costumi solo CT, dir. Carella |
 | 6 | Tosca | mundoclasico | ✅ Scene/Costumi separati, costumi solo CT, cast Haddock/Raimondi/Urmana |
 | 7 | L'Orfeo | forumopera | ✅ Scene+Costumi solo CT (no joint), full cast, luci Foti, video Iaquone |
 | 8 | Sonnambula 2018 | operaroma.it | ✅ Toccafondo riposizionato come animazioni video, scene solo CT, Gabbiani aggiunto |
 | 9 | Gertrude Le Cri | theatre-odeon.eu | ✅ Scene joint Corsetti+CT, costumi solo CT (non Buscemi), Cappelletti, traduzione FR |
-| 10 | Don Carlos video | (da verificare) | ⏳ pending |
+| 10 | Don Carlos video | mariinsky.ru | ✅ Aggiunti Luca Attilii + Fabio Iaquone |
 | 11 | Attilii spelling | utente conferma | ✅ Pagliacci era corretto; Macbeth allineato a «Attilii» |
 
 ---
