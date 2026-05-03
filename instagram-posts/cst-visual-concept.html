@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>CST Instagram Post</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+
+    .frame {
+      width: 100vmin;
+      height: 100vmin;
+      position: relative;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      padding: 6.5vmin 7.4vmin;
+      overflow: hidden;
+    }
+
+    /* Top bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-shrink: 0;
+    }
+
+    .studio-logo {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1vmin;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(232, 230, 225, 0.32);
+      line-height: 1.6;
+    }
+
+    .studio-logo strong { font-weight: 500; }
+
+    .cst-badge {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.9vmin;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(232, 230, 225, 0.22);
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    /* Center content */
+    .center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4vmin 0 3vmin;
+    }
+
+    .tag-line {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1vmin;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #e040a0, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 3.5vmin;
+    }
+
+    .headline {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 7vmin;
+      font-weight: 400;
+      line-height: 1.12;
+      color: #e8e6e1;
+      margin-bottom: 4vmin;
+      max-width: 55%;
+    }
+
+    .headline em {
+      font-style: italic;
+      color: rgba(232, 230, 225, 0.55);
+    }
+
+    .divider {
+      width: 4.5vmin;
+      height: 1px;
+      background: linear-gradient(90deg, #e040a0, #a855f7);
+      margin-bottom: 3.5vmin;
+    }
+
+    .services {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.15vmin;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(232, 230, 225, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      line-height: 2.4;
+    }
+
+    .services span {
+      display: flex;
+      align-items: center;
+      gap: 1.2vmin;
+    }
+
+    .services span::before {
+      content: '';
+      display: inline-block;
+      width: 0.35vmin;
+      height: 0.35vmin;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e040a0, #a855f7);
+      flex-shrink: 0;
+    }
+
+    .services .secondary {
+      color: rgba(232, 230, 225, 0.28);
+      margin-top: 0.8vmin;
+    }
+
+    /* Bottom */
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 3vmin;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      flex-shrink: 0;
+    }
+
+    .email {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.1vmin;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(232, 230, 225, 0.4);
+    }
+
+    .label-bottom {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.9vmin;
+      font-weight: 300;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: rgba(232, 230, 225, 0.18);
+    }
+
+    /* SVG sketch */
+    svg.sketch {
+      position: absolute;
+      right: 7vmin;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32vmin;
+      height: 32vmin;
+      opacity: 0.08;
+    }
+  </style>
+</head>
+<body>
+<div class="frame">
+
+  <!-- Architectural sketch -->
+  <svg class="sketch" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="60" y="80" width="220" height="160" stroke="white" stroke-width="1.5"/>
+    <line x1="60" y1="80" x2="20" y2="40" stroke="white" stroke-width="1"/>
+    <line x1="280" y1="80" x2="320" y2="40" stroke="white" stroke-width="1"/>
+    <line x1="280" y1="240" x2="320" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="60" y1="240" x2="20" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="20" y1="40" x2="320" y2="40" stroke="white" stroke-width="1"/>
+    <line x1="20" y1="40" x2="20" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="320" y1="40" x2="320" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="20" y1="280" x2="320" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="170" y1="160" x2="60" y2="80" stroke="white" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="170" y1="160" x2="280" y2="80" stroke="white" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="170" y1="160" x2="280" y2="240" stroke="white" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="170" y1="160" x2="60" y2="240" stroke="white" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="60" y1="270" x2="280" y2="270" stroke="white" stroke-width="0.5"/>
+    <line x1="60" y1="265" x2="60" y2="275" stroke="white" stroke-width="0.5"/>
+    <line x1="280" y1="265" x2="280" y2="275" stroke="white" stroke-width="0.5"/>
+    <line x1="50" y1="80" x2="50" y2="240" stroke="white" stroke-width="0.5"/>
+    <line x1="45" y1="80" x2="55" y2="80" stroke="white" stroke-width="0.5"/>
+    <line x1="45" y1="240" x2="55" y2="240" stroke="white" stroke-width="0.5"/>
+    <circle cx="170" cy="160" r="6" stroke="white" stroke-width="1"/>
+    <circle cx="170" cy="160" r="2" fill="white"/>
+  </svg>
+
+  <!-- Top -->
+  <div class="top-bar">
+    <div class="studio-logo">CRISTIANTARABORRELLI<strong>STUDIO</strong>®</div>
+    <div class="cst-badge">Creative Strike<br>Team</div>
+  </div>
+
+  <!-- Center -->
+  <div class="center">
+    <div class="tag-line">Visual Support · Events &amp; Live Productions</div>
+    <h1 class="headline">
+      Before the render,<br>
+      there's the idea.<br>
+      <em>We make it<br>visible.</em>
+    </h1>
+    <div class="divider"></div>
+    <div class="services">
+      <span>Hand sketches</span>
+      <span>Storyboard</span>
+      <span>Visual Concept</span>
+      <span class="secondary">3D Renders &nbsp;·&nbsp; Motion Design &nbsp;·&nbsp; AI Video</span>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="bottom">
+    <div class="email">creativestriketeam@libero.it</div>
+    <div class="label-bottom">White label · Express delivery</div>
+  </div>
+
+</div>
+</body>
+</html>
