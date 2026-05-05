@@ -206,6 +206,79 @@
     }
   </style>
 
+  <!-- COUNTDOWN GIOCHI DEL MEDITERRANEO TARANTO 2026 -->
+  <section class="reveal" style="padding:2.5rem 1.5rem;background:linear-gradient(135deg,#0a3d7a 0%,#1a4d8c 50%,#2a78bd 100%);color:#fff;border-radius:var(--radius);margin:2rem auto;max-width:1300px;">
+    <div class="taranto-countdown" style="display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center;">
+      <!-- Logo XX Taranto 2026 (placeholder testuale: TODO sostituire con logo ufficiale .svg) -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;">
+        <div style="font-family:var(--font-title);font-weight:700;font-size:clamp(2.4rem,5vw,3.5rem);letter-spacing:-0.05em;line-height:1;background:linear-gradient(90deg,#e85d4a 0%,#f0a020 25%,#7fb6e6 50%,#3a8edd 75%,#1a4d8c 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">XX</div>
+        <div style="font-family:var(--font-sans);font-weight:600;font-size:0.85rem;letter-spacing:0.08em;color:#fff;margin-top:0.25rem;">TARANTO 2026</div>
+        <div style="font-family:var(--font-sans);font-weight:300;font-size:0.55rem;letter-spacing:0.18em;color:rgba(255,255,255,0.75);margin-top:0.25rem;">XX GIOCHI DEL MEDITERRANEO</div>
+        <div style="font-size:1.1rem;color:rgba(255,255,255,0.6);margin-top:0.4rem;letter-spacing:0.2em;">&#9678;&#9678;&#9678;</div>
+      </div>
+      <!-- Welcome message -->
+      <div style="text-align:center;">
+        <p style="font-family:'Caveat',var(--font-serif);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:400;color:#fff;margin:0 0 0.5rem;line-height:1;">Welcome</p>
+        <p style="font-family:var(--font-serif);font-size:1.05rem;line-height:1.5;color:rgba(255,255,255,0.9);margin:0;">
+          <span data-lang-block="it">Tempo rimanente ai <strong style="color:#fff;">Giochi del Mediterraneo</strong> Taranto <strong>2026</strong></span>
+          <span data-lang-block="en">Time remaining to the <strong style="color:#fff;">Mediterranean Games</strong> Taranto <strong>2026</strong></span>
+          <span data-lang-block="fr">Temps restant aux <strong style="color:#fff;">Jeux M&eacute;diterran&eacute;ens</strong> Tarente <strong>2026</strong></span>
+        </p>
+      </div>
+      <!-- Counter -->
+      <div style="display:flex;gap:0.6rem;flex-shrink:0;" id="taranto-counter">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:0.6rem;min-width:74px;padding:0.7rem 0.4rem;text-align:center;">
+          <div id="td-days" style="font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;line-height:1;">--</div>
+          <div style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-top:0.35rem;" data-i18n="td-days" data-it="GIORNI" data-en="DAYS" data-fr="JOURS">GIORNI</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:0.6rem;min-width:74px;padding:0.7rem 0.4rem;text-align:center;">
+          <div id="td-hours" style="font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;line-height:1;">--</div>
+          <div style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-top:0.35rem;" data-i18n="td-hours" data-it="ORE" data-en="HOURS" data-fr="HEURES">ORE</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:0.6rem;min-width:74px;padding:0.7rem 0.4rem;text-align:center;">
+          <div id="td-mins" style="font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;line-height:1;">--</div>
+          <div style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-top:0.35rem;" data-i18n="td-mins" data-it="MINUTI" data-en="MINUTES" data-fr="MINUTES">MINUTI</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:0.6rem;min-width:74px;padding:0.7rem 0.4rem;text-align:center;">
+          <div id="td-secs" style="font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;line-height:1;">--</div>
+          <div style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-top:0.35rem;" data-i18n="td-secs" data-it="SECONDI" data-en="SECONDS" data-fr="SECONDES">SECONDI</div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 900px) {
+        .taranto-countdown { grid-template-columns: 1fr !important; gap: 1.5rem !important; text-align: center; }
+        .taranto-countdown > div:last-child { justify-content: center; flex-wrap: wrap; }
+      }
+    </style>
+  </section>
+  <script>
+    (function(){
+      // Cerimonia di apertura: 21 agosto 2026, ore 21:00 italiane (CEST = UTC+2)
+      var target = new Date('2026-08-21T21:00:00+02:00').getTime();
+      function tick() {
+        var now = Date.now();
+        var diff = target - now;
+        if (diff < 0) diff = 0;
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        var pad = function(n, len){ var v = String(n); while(v.length < (len||2)) v = '0'+v; return v; };
+        var dEl = document.getElementById('td-days');
+        var hEl = document.getElementById('td-hours');
+        var mEl = document.getElementById('td-mins');
+        var sEl = document.getElementById('td-secs');
+        if (dEl) dEl.textContent = pad(d, 3);
+        if (hEl) hEl.textContent = pad(h);
+        if (mEl) mEl.textContent = pad(m);
+        if (sEl) sEl.textContent = pad(s);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+
   <!-- GALLERY -->
   <section class="projects-section">
     <div class="projects-header reveal">
