@@ -22,7 +22,13 @@ def convert(text):
     text = re.sub(r"(?<!\*)\*([^*\n]+?)\*(?!\*)", to_italic, text)
     return text
 
+def instagram_count(text):
+    """Instagram conta caratteri in UTF-16 code units. Mathematical Bold/Italic
+    occupano 2 code units (surrogate pair). Questo è il conteggio reale che Instagram applica."""
+    return len(text.encode("utf-16-le")) // 2
+
 if __name__ == "__main__":
     src = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
     out = convert(src)
     sys.stdout.buffer.write(out.encode("utf-8"))
+    sys.stderr.write(f"\n[IG count UTF-16: {instagram_count(out.strip())} / 2200]\n")
