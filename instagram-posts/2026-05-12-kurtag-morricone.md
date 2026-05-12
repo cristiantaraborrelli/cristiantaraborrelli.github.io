@@ -1,4 +1,4 @@
-# Instagram Post — 2026-05-12 (variante forte, italiano, Morricone + Iaquone esteso)
+# Instagram Post — 2026-05-12 (variante forte, italiano, Morricone + Iaquone come pensiero)
 ## Tipo: Portfolio
 ## Progetto/Servizio: Fra(m)menti — Kurtág & Lorusso, Mattatoio La Pelanda Roma 2018
 ## Account: @cristiantaraborrelli.director
@@ -10,13 +10,15 @@ C'è un Ennio Morricone che il pubblico del cinema non ha mai conosciuto.
 
 Dal 1965 al 1980 ha suonato la tromba — atonale, vicina al rumore — dentro il **Gruppo di Improvvisazione Nuova Consonanza**, fondato a Roma da Franco Evangelisti. Stockhausen, Cage e l'avanguardia europea passavano da quel collettivo come da una bottega. Morricone non ne parlava nelle interviste sul Premio Oscar. Era l'altra metà del suo lavoro, quella che teneva nascosta come un'ustione.
 
-Quel Morricone è l'eredità sotterranea dell'**Associazione Nuova Consonanza**, fondata nel 1959. La più longeva avanguardia musicale italiana.
+Quel Morricone è l'eredità sotterranea dell'**Associazione Nuova Consonanza**, fondata nel 1959 — la più longeva avanguardia musicale italiana.
 
-Nel 2018, per il **55° Festival di Nuova Consonanza**, Cristian Taraborrelli firma regia e scene di **Fra(m)menti** al Mattatoio — La Pelanda. In scena: i *Kafka-Fragmente op. 24* di **György Kurtág** — quaranta micro-brani di pochi secondi su frammenti di Kafka — e in prima esecuzione assoluta *Marginalia* di **Giulia Lorusso**. Soprano Ljuba Bergamelli, violinista Lorenzo Gentili-Tedeschi (esecuzione conservata nell'archivio Nuova Consonanza, scheda 7573).
+Nel 2018, per il **55° Festival di Nuova Consonanza**, Cristian Taraborrelli firma regia e scene di **Fra(m)menti** al Mattatoio — La Pelanda. In scena: i *Kafka-Fragmente op. 24* di **György Kurtág** — quaranta micro-brani di pochi secondi su frammenti di Kafka — e in prima esecuzione assoluta *Marginalia* di **Giulia Lorusso**. Soprano Ljuba Bergamelli, violinista Lorenzo Gentili-Tedeschi.
 
-Il dialogo decisivo è quello con il video di **Fabio Massimo Iaquone** — pioniere italiano dell'immagine elettronica come materia drammaturgica, fondatore del concept **DVT, Digital Versatile Theatre**. Iaquone porta in scena un'eredità rara: ha firmato le video scenografie di **Robert Wilson** per *Prometeo* e *Relative Light* (Maubeuge, Valencia, Roma, Atene); ha lavorato con le **sorelle Katia e Marielle Labèque** — il duo pianistico più importante al mondo — su *Across the Universe of Languages* e sull'installazione *Miko*; e da vent'anni firma con **Giorgio Barberio Corsetti** alcuni dei lavori più radicali del teatro italiano contemporaneo (*America*, *Doctor Faustus*, *The Tempest*).
+A trasformare quel concerto in teatro è il pensiero di **Fabio Massimo Iaquone**. Pioniere italiano del video applicato alla scena, ha passato quarant'anni a dimostrare un'idea sola: che l'immagine elettronica non è una superficie ma una **materia drammaturgica**. Non un fondale, non un commento, non un orpello illustrativo da appoggiare dietro l'azione. Una pelle, piuttosto. Un battito che il corpo dell'attore attraversa.
 
-In Fra(m)menti il suo video non illustra. **Respira con la musica.** Resta sulla soglia tra silenzio e suono come una pelle che pulsa.
+Da questa intuizione nasce il suo concetto di **DVT — Digital Versatile Theatre**: uno spazio scenico in cui il performer non sta *davanti* all'immagine, ma *dentro*. Dove le coordinate prospettiche del teatro tradizionale si dissolvono e l'architettura, la luce e il video aderiscono al millimetro fino a coincidere. È la stessa lezione che ha portato dentro le video scenografie di Robert Wilson, dentro i lavori con Katia e Marielle Labèque, dentro il sodalizio ventennale con Giorgio Barberio Corsetti.
+
+In Fra(m)menti questo pensiero diventa esatto: il video non racconta Kafka. **Respira con lui**. Si fa carne sottile sulla parete del Mattatoio, e quando il violino tace, anche l'immagine si ritrae.
 
 Nessuna scenografia che decora. Lame di luce sul nero. La soprano e il violinista non sono dentro un set: **sono il set**. Al frammento non si aggiunge nulla. Si toglie finché resta solo la densità.
 
@@ -28,4 +30,4 @@ Mattatoio La Pelanda · 18 dicembre 2018
 
 Link in bio → @cristiantaraborrelli.director
 
-#nuovaConsonanza #morricone #kurtag #robertwilson #labeque #scenografia #avanguardia #fashionShow #runwayDesign
+#nuovaConsonanza #morricone #kurtag #iaquone #scenografia #avanguardia #fashionShow #runwayDesign
