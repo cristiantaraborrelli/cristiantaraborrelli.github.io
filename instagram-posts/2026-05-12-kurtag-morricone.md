@@ -1,4 +1,4 @@
-# Instagram Post — 2026-05-12 (variante forte, italiano, Morricone + Iaquone come pensiero)
+# Instagram Post — 2026-05-12 (variante forte, italiano, Morricone + Iaquone compresso + Taraborrelli che esplode)
 ## Tipo: Portfolio
 ## Progetto/Servizio: Fra(m)menti — Kurtág & Lorusso, Mattatoio La Pelanda Roma 2018
 ## Account: @cristiantaraborrelli.director
@@ -12,15 +12,17 @@ Dal 1965 al 1980 ha suonato la tromba — atonale, vicina al rumore — dentro i
 
 Quel Morricone è l'eredità sotterranea dell'**Associazione Nuova Consonanza**, fondata nel 1959 — la più longeva avanguardia musicale italiana.
 
-Nel 2018, per il **55° Festival di Nuova Consonanza**, Cristian Taraborrelli firma regia e scene di **Fra(m)menti** al Mattatoio — La Pelanda. In scena: i *Kafka-Fragmente op. 24* di **György Kurtág** — quaranta micro-brani di pochi secondi su frammenti di Kafka — e in prima esecuzione assoluta *Marginalia* di **Giulia Lorusso**. Soprano Ljuba Bergamelli, violinista Lorenzo Gentili-Tedeschi.
+Nel 2018, per il **55° Festival di Nuova Consonanza**, **Cristian Taraborrelli** firma regia e scene di **Fra(m)menti** al Mattatoio — La Pelanda. In scena: i *Kafka-Fragmente op. 24* di **György Kurtág** — quaranta micro-brani di pochi secondi su frammenti di Kafka — e in prima esecuzione assoluta *Marginalia* di **Giulia Lorusso**.
 
-A trasformare quel concerto in teatro è il pensiero di **Fabio Massimo Iaquone**. Pioniere italiano del video applicato alla scena, ha passato quarant'anni a dimostrare un'idea sola: che l'immagine elettronica non è una superficie ma una **materia drammaturgica**. Non un fondale, non un commento, non un orpello illustrativo da appoggiare dietro l'azione. Una pelle, piuttosto. Un battito che il corpo dell'attore attraversa.
+A disposizione, lo strumento più raffinato del teatro contemporaneo italiano: il video di **Fabio Massimo Iaquone**, pioniere dell'immagine elettronica come materia drammaturgica (DVT — Digital Versatile Theatre), già al fianco di Robert Wilson, delle sorelle Labèque, di Giorgio Barberio Corsetti.
 
-Da questa intuizione nasce il suo concetto di **DVT — Digital Versatile Theatre**: uno spazio scenico in cui il performer non sta *davanti* all'immagine, ma *dentro*. Dove le coordinate prospettiche del teatro tradizionale si dissolvono e l'architettura, la luce e il video aderiscono al millimetro fino a coincidere. È la stessa lezione che ha portato dentro le video scenografie di Robert Wilson, dentro i lavori con Katia e Marielle Labèque, dentro il sodalizio ventennale con Giorgio Barberio Corsetti.
+Ma uno strumento non è ancora un teatro. **Serve la mano che lo accorda.**
 
-In Fra(m)menti questo pensiero diventa esatto: il video non racconta Kafka. **Respira con lui**. Si fa carne sottile sulla parete del Mattatoio, e quando il violino tace, anche l'immagine si ritrae.
+È qui che esplode il gesto registico di Taraborrelli. Non *usa* il video di Iaquone: lo **integra in una partitura visiva** che ha lo stesso peso della musica di Kurtág. Decide quando l'immagine deve farsi pelle e quando deve sparire. Sceglie dove la voce della soprano Ljuba Bergamelli deve sostare e dove il violino di Lorenzo Gentili-Tedeschi deve aprirsi nel buio. Tratta lame di luce, corpi, materiali poveri e pixel come elementi di un'unica drammaturgia. Non aggiunge linguaggi: li fa coincidere.
 
-Nessuna scenografia che decora. Lame di luce sul nero. La soprano e il violinista non sono dentro un set: **sono il set**. Al frammento non si aggiunge nulla. Si toglie finché resta solo la densità.
+Questa è la capacità rara di Taraborrelli — sviluppata in trent'anni tra Teatro alla Scala, Mariinsky, Grand Théâtre de Genève, cerimonie olimpiche: **trasformare ogni strumento, anche il più sofisticato, nella stessa materia scenica**. Il video non rimane video. La musica non rimane concerto. La scena diventa un corpo unico che respira.
+
+Niente decoro. Lame di luce sul nero. Al frammento non si aggiunge nulla. Si toglie finché resta solo la densità.
 
 È la grammatica che attraversa tutto il nostro lavoro — dalle scene per la Scala alle cerimonie olimpiche, fino alle scenografie per la moda contemporanea, dove la sottrazione radicale è la cifra di chi sa cosa lasciare in piedi.
 
@@ -30,4 +32,4 @@ Mattatoio La Pelanda · 18 dicembre 2018
 
 Link in bio → @cristiantaraborrelli.director
 
-#nuovaConsonanza #morricone #kurtag #iaquone #scenografia #avanguardia #fashionShow #runwayDesign
+#nuovaConsonanza #morricone #kurtag #scenografia #regia #avanguardia #fashionShow #runwayDesign
