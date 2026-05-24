@@ -1,2 +1,36 @@
-backup/
-scripts/
+# === STRATEGIE E MATERIALI PRIVATI (mai pubblicare su repo pubblici) ===
+IL_CODICE_*.md
+ALGORITMO_*.md
+POETICA_*.md
+TRACKING_*.md
+MEMORY.md
+LA_FREQUENZA.md
+quaderno/
+post/
+archivio/
+
+# Kit Pinterest (strategia, calendario, keyword, CSV pin)
+_pinterest_kit/
+
+# Draft social posts (instagram, linkedin)
+instagram-posts/
+linkedin-posts/
+
+# === CONFIGURAZIONE CLAUDE E SEGRETI ===
+CLAUDE.md
+.claude/
+.env
+.env.*
+*.token
+secrets.*
+*credential*
+*password*
+
+# === STANDARD LOCALI ===
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.git/
