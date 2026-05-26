@@ -44,6 +44,7 @@ Thumbs.db
 *.hreflang-backup
 *.6wins-backup
 *.monogravnav-backup
+*.navfix-backup
 *.bak
 *.orig
 
