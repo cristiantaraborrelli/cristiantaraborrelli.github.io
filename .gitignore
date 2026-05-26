@@ -48,6 +48,8 @@ Thumbs.db
 *.hidemachines-backup
 *.gallrm-backup
 *.socialnav-backup
+*.gapfill-backup
+*.metafill-backup
 *.bak
 *.orig
 
