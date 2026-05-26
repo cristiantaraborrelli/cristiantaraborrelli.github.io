@@ -47,6 +47,7 @@ Thumbs.db
 *.navfix-backup
 *.hidemachines-backup
 *.gallrm-backup
+*.socialnav-backup
 *.bak
 *.orig
 
