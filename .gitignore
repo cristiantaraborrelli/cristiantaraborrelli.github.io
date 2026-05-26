@@ -45,6 +45,7 @@ Thumbs.db
 *.6wins-backup
 *.monogravnav-backup
 *.navfix-backup
+*.hidemachines-backup
 *.bak
 *.orig
 
