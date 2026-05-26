@@ -5,6 +5,7 @@ POETICA_*.md
 TRACKING_*.md
 MEMORY.md
 LA_FREQUENZA.md
+MASTER_TRACKER.md
 quaderno/
 post/
 archivio/
@@ -34,3 +35,18 @@ Thumbs.db
 .vscode/
 .idea/
 .git/
+
+# === BACKUP FILE DA SCRIPT (non committare mai) ===
+*.contact-backup
+*.gdpr-backup
+*.privacy-backup
+*.polish-backup
+*.hreflang-backup
+*.6wins-backup
+*.monogravnav-backup
+*.bak
+*.orig
+
+# === SCRIPT LOCALI DI BUILD (non pubblicare, restano in locale) ===
+scripts/
+reports/
