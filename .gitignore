@@ -50,6 +50,7 @@ Thumbs.db
 *.socialnav-backup
 *.gapfill-backup
 *.metafill-backup
+*.atelierrm-backup
 *.bak
 *.orig
 
