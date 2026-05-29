@@ -61,6 +61,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === Sticky side TOC: "il libretto della pagina" ===
+  // Mounted only on production pages with >= 5 .proj-sec sections.
+  // Reads each section's .s-label as the entry title; smooth-scrolls; highlights active via IntersectionObserver.
+  const tocSections = document.querySelectorAll('.proj-sec');
+  if (tocSections.length >= 5 && window.matchMedia('(min-width: 1281px)').matches) {
+    const labels = [];
+    tocSections.forEach((sec, i) => {
+      const lab = sec.querySelector('.s-label');
+      if (!lab) return;
+      // Assign id if missing — used by anchor links and observer
+      if (!sec.id) sec.id = 'sec-' + (i + 1);
+      labels.push({ id: sec.id, text: (lab.textContent || '').trim(), el: sec });
+    });
+    if (labels.length >= 5) {
+      const toc = document.createElement('aside');
+      toc.className = 'toc-side';
+      toc.setAttribute('aria-label', 'Indice della pagina');
+      toc.innerHTML = '<p class="toc-side-title">Index</p><ol></ol>';
+      const ol = toc.querySelector('ol');
+      labels.forEach(l => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#' + l.id;
+        // Title text: cut at first em-dash for compactness ("Note di Regia — Cristian..." -> "Note di Regia")
+        const title = l.text.split(/\s+[—–-]\s+/)[0];
+        a.textContent = title.length > 40 ? title.slice(0, 38) + '…' : title;
+        a.dataset.target = l.id;
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const t = document.getElementById(l.id);
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        li.appendChild(a);
+        ol.appendChild(li);
+      });
+      document.body.appendChild(toc);
+
+      // Show TOC after scrolling past hero (same trigger as frame counter)
+      const showTrigger = window.innerHeight * 0.55;
+      let tocVisible = false;
+      const updateTocVis = () => {
+        if (window.scrollY > showTrigger && !tocVisible) { toc.classList.add('show'); tocVisible = true; }
+        else if (window.scrollY <= showTrigger * 0.7 && tocVisible) { toc.classList.remove('show'); tocVisible = false; }
+      };
+      window.addEventListener('scroll', updateTocVis, { passive: true });
+      updateTocVis();
+
+      // Highlight active section
+      const tocLinks = toc.querySelectorAll('a');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(a => a.classList.toggle('active', a.dataset.target === entry.target.id));
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+      labels.forEach(l => observer.observe(l.el));
+    }
+  }
+
   // === Frame Counter: cinematic scroll-position indicator ===
   // Only on production/long pages: any page with >= 5 .proj-sec sections.
   const sections = document.querySelectorAll('.proj-sec');

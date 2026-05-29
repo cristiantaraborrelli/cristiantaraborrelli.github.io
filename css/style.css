@@ -1037,6 +1037,88 @@ blockquote.press-quote footer a:hover {
   .frame-counter { transition: none; }
 }
 
+/* --- Sticky side TOC: "il libretto della pagina" --- */
+/* Mounted by JS on pages with 5+ .proj-sec; gives the long-form essay a navigable spine. */
+.toc-side {
+  position: fixed;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  max-height: 70vh;
+  width: 200px;
+  overflow-y: auto;
+  z-index: 40;
+  padding: 0.8rem 0.6rem;
+  background: rgba(255,253,247,0.78);
+  border: 1px solid var(--muted2);
+  border-radius: 12px;
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  line-height: 1.55;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform-origin: left center;
+}
+.toc-side.show { opacity: 0.95; }
+.toc-side::-webkit-scrollbar { width: 4px; }
+.toc-side::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 4px; }
+.toc-side-title {
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--muted2);
+}
+.toc-side ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: toc;
+}
+.toc-side li {
+  counter-increment: toc;
+  margin: 0;
+}
+.toc-side a {
+  display: block;
+  padding: 0.32rem 0 0.32rem 1.6rem;
+  position: relative;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  border-left: 1px solid transparent;
+}
+.toc-side a::before {
+  content: counter(toc, decimal-leading-zero);
+  position: absolute;
+  left: 0.4rem;
+  top: 0.32rem;
+  font-size: 0.55rem;
+  color: var(--muted2);
+  letter-spacing: 0.05em;
+}
+.toc-side a:hover { color: var(--ink); padding-left: 1.8rem; }
+.toc-side a.active {
+  color: var(--ink);
+  border-left-color: var(--ink);
+  padding-left: 1.8rem;
+}
+.toc-side a.active::before { color: var(--ink); }
+@media (max-width: 1280px) {
+  .toc-side { display: none; }
+}
+@media print { .toc-side { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .toc-side { transition: opacity 0.3s ease; transform: translateY(-50%); }
+  .toc-side a { transition: none; }
+}
+
 /* --- 404 page: "La commedia è finita" --- */
 .notfound {
   min-height: 100vh;
