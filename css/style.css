@@ -1288,10 +1288,7 @@ blockquote.press-quote footer a:hover {
   /* CRITICAL: Force all reveal animations visible.
      Without this, sections below the fold print BLANK because
      IntersectionObserver hasn't added .visible to them yet. */
-  .reveal,
-  .reveal-d1,
-  .reveal-d2,
-  .reveal-d3 {
+  .reveal, .reveal-d1, .reveal-d2, .reveal-d3 {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
@@ -1305,100 +1302,175 @@ blockquote.press-quote footer a:hover {
     background: white !important;
     position: relative !important;
   }
-  .proj-hero img { opacity: 0.7 !important; max-height: 10cm; object-fit: contain; display: block; margin: 0 auto; }
+  .proj-hero img { opacity: 0.7 !important; max-height: 9cm; object-fit: contain; display: block; margin: 0 auto; }
   .proj-hero-overlay, .proj-hero::after, .proj-hero video.cinema-hero { display: none !important; }
-  .proj-hero-content { position: static !important; padding: 0.5cm 0 0.8cm 0; color: #111 !important; }
-  .proj-hero-title { font-size: 2.6em !important; color: #111 !important; text-shadow: none !important; margin: 0 0 0.3cm 0 !important; }
+  .proj-hero-content { position: static !important; padding: 0.3cm 0 0.5cm 0; color: #111 !important; }
+  .proj-hero-title { font-size: 2.4em !important; color: #111 !important; text-shadow: none !important; margin: 0 0 0.2cm 0 !important; }
   .proj-hero-cat, .proj-hero-sub, .proj-hero-meta { color: #444 !important; }
 
   /* Body typography */
-  body { background: white !important; color: #111 !important; font-size: 10.5pt; }
-  .proj-body, main.page { padding: 0.5cm 0 !important; max-width: 17cm !important; margin: 0 auto !important; }
+  body { background: white !important; color: #111 !important; font-size: 10pt; }
+  .proj-body, main.page { padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
 
-  /* Sections: NO forced page-breaks — let content flow naturally.
-     With 20+ sections, page-break-inside:avoid creates white-space at page bottoms. */
+  /* Sections: completely natural flow, no forced breaks.
+     With 20+ sections, page-break-inside:avoid creates white-space at page bottoms.
+     break-inside:auto allows the renderer to slice anywhere it likes. */
   .proj-sec {
-    margin-bottom: 0.6cm !important;
+    margin-bottom: 0.4cm !important;
     orphans: 3;
     widows: 3;
-    break-inside: auto;
-    page-break-inside: auto;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    break-before: auto !important;
+    page-break-before: auto !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
   }
-  .s-label { color: #111 !important; border-bottom: 1px solid #888 !important; padding-bottom: 3pt; font-size: 0.78em; margin-bottom: 0.4cm !important; page-break-after: avoid; }
-  p, li { font-size: 10.5pt !important; line-height: 1.5 !important; color: #222 !important; orphans: 3; widows: 3; }
-  blockquote { border-left: 2pt solid #444 !important; padding-left: 0.5cm !important; color: #333 !important; orphans: 3; widows: 3; }
-  cite, .proj-meta-label { color: #666 !important; }
+  /* Last 2 sections: no margin to avoid trailing blank page */
+  .proj-body > .proj-sec:nth-last-child(-n+2),
+  .proj-body > .proj-sec:last-child {
+    margin-bottom: 0 !important;
+    page-break-after: auto !important;
+  }
+  /* s-label: NO page-break-after:avoid — was causing labels to jump to next page,
+     leaving white space at the bottom of previous page. */
+  .s-label {
+    color: #111 !important;
+    border-bottom: 1px solid #888 !important;
+    padding-bottom: 2pt;
+    font-size: 0.75em;
+    margin-bottom: 0.25cm !important;
+  }
+  p, li { font-size: 10pt !important; line-height: 1.45 !important; color: #222 !important; orphans: 2; widows: 2; }
+  blockquote { border-left: 2pt solid #444 !important; padding-left: 0.4cm !important; color: #333 !important; orphans: 2; widows: 2; margin: 0.3cm 0 !important; }
+  cite, .proj-meta-label { color: #666 !important; page-break-before: avoid !important; break-before: avoid !important; }
+  /* Citation lines (the small uppercase author attribution under blockquotes) must
+     stay glued to the preceding quote to avoid orphan trailing pages. */
+  blockquote + p,
+  .proj-sec p[style*="0.75rem"],
+  .proj-sec p[style*="0.7rem"][style*="uppercase"] {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+  /* Keep the entire last apparatus-critique block on one page to prevent the
+     final attribution line from spilling onto an otherwise blank page. */
+  .proj-body > .proj-sec:nth-last-child(-n+3) > div > div {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
 
   /* Intro: disable grid layout, stack vertically */
   .proj-intro {
     display: block !important;
     grid-template-columns: none !important;
     gap: 0 !important;
-    padding-bottom: 0.6cm !important;
-    margin-bottom: 0.6cm !important;
+    padding-bottom: 0.4cm !important;
+    margin-bottom: 0.4cm !important;
     border-bottom: 1px solid #ccc !important;
   }
-  .proj-intro-text { max-width: 100% !important; margin-bottom: 0.6cm !important; }
+  .proj-intro-text { max-width: 100% !important; margin-bottom: 0.4cm !important; }
   .proj-intro-text p { max-width: 100% !important; }
   .proj-meta {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    gap: 0.4cm 0.8cm !important;
-    margin-top: 0.4cm !important;
+    gap: 0.25cm 0.6cm !important;
+    margin-top: 0.3cm !important;
   }
-  .proj-meta > div { flex: 0 1 calc(50% - 0.4cm); margin: 0 !important; }
-  .proj-meta-label { font-size: 0.55rem !important; margin-bottom: 0.1cm !important; }
-  .proj-meta-val { font-size: 0.85rem !important; }
+  .proj-meta > div { flex: 0 1 calc(50% - 0.3cm); margin: 0 !important; }
+  .proj-meta-label { font-size: 0.5rem !important; margin-bottom: 0.05cm !important; }
+  .proj-meta-val { font-size: 0.78rem !important; line-height: 1.3 !important; }
 
-  /* Hide multi-language inactive blocks redundantly (JS already does it via inline style,
-     but if user prints before JS runs, fall back to showing only IT.
-     The browser respects inline style="display:none" set by lang.js anyway.) */
+  /* Team list: compact rows so cast/credits don't waste a full page */
+  .team-list { width: 100% !important; }
+  .team-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr !important;
+    padding: 0.12cm 0 !important;
+    border-bottom: 1px solid #ddd !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .team-row:hover { padding-left: 0 !important; background: transparent !important; }
+  .team-role { font-size: 7.5pt !important; color: #555 !important; letter-spacing: 0.06em !important; }
+  .team-name { font-size: 9.5pt !important; line-height: 1.3 !important; color: #111 !important; }
 
   /* Show URLs after links */
   a[href]::after {
     content: " [" attr(href) "]";
-    font-size: 7.5pt;
-    color: #888;
+    font-size: 7pt;
+    color: #999;
     font-weight: normal;
     word-wrap: break-word;
   }
-  a[href^="#"]::after, a[href^="javascript:"]::after, a[href^="mailto:"]::after { content: ""; }
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after,
+  a[href^="mailto:"]::after,
+  .tag::after,
+  .related-card a::after { content: ""; }
 
-  /* Gallery: limit per page, allow page breaks between items */
-  .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.3cm !important; display: grid !important; }
-  .gallery-item { break-inside: avoid; page-break-inside: avoid; }
-  .gallery-item img { max-height: 7cm; object-fit: contain; width: 100%; }
-  .gallery-item figcaption { font-size: 8pt !important; color: #666 !important; }
+  /* Gallery: use multicolumn to AVOID half-empty last pages.
+     CSS multicol fills each column completely before flowing to the next,
+     so gallery images compact tightly without leaving white space below. */
+  .gallery-grid {
+    display: block !important;
+    column-count: 2 !important;
+    column-gap: 0.3cm !important;
+    grid-template-columns: none !important;
+  }
+  .gallery-item {
+    display: block !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin: 0 0 0.3cm 0 !important;
+    aspect-ratio: auto !important;
+    background: transparent !important;
+  }
+  .gallery-item picture, .gallery-item img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 5.5cm !important;
+    object-fit: contain !important;
+  }
+  .gallery-item figcaption { font-size: 7.5pt !important; color: #666 !important; }
+
+  /* Figurini section: 3-col multicol so 9 figurini fit nicely */
+  .proj-sec .gallery-grid[style*="repeat(3"] {
+    column-count: 3 !important;
+  }
 
   /* Video embeds: hide entirely */
   .yt-lite, .video-embed iframe, .video-embed { display: none !important; }
-  .video-grid { display: none !important; }
+  .video-grid, .video-item { display: none !important; }
 
-  /* Related productions: hide (not part of dossier) */
-  .related-productions, .next-prev-nav { display: none !important; }
+  /* Tags row: hide. The tag pillars spill across pages and create
+     near-empty trailing pages. Tags are for web discovery, not dossier value. */
+  .tags-row, .tag { display: none !important; }
+  /* Hide the tags wrapper section entirely so the s-label "Tag" doesn't print alone */
+  .proj-sec:has(> .tags-row) { display: none !important; }
 
-  /* Hide empty proj-sec wrappers (next-prev/related) */
+  /* Related productions + next-prev navigation: not part of dossier */
+  .related-productions, .next-prev-nav,
+  .related-grid, .related-card { display: none !important; }
+
+  /* Hide empty proj-sec wrappers */
   .proj-sec:empty { display: none !important; }
 
-  /* Page break helpers */
-  h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+  /* Page break helpers — h1 only (h2/h3 break-after avoid creates trailing whitespace) */
+  h1 { page-break-after: avoid; break-after: avoid; }
   table { page-break-inside: avoid; break-inside: avoid; font-size: 9pt !important; }
 
-  /* Hidden language blocks should stay hidden in print too.
-     lang.js sets display:none via inline style — preserve it.
-     For pre-JS print, we hide non-default languages by default. */
-  [data-lang-block="en"][style*="display: none"],
-  [data-lang-block="fr"][style*="display: none"],
-  [data-lang-block="it"][style*="display: none"] { display: none !important; }
+  /* Hidden language blocks: respect inline display:none set by lang.js */
+  [data-lang-block][style*="display: none"] { display: none !important; }
 
-  /* Header / footer on every page */
+  /* Print page setup */
   @page {
     size: A4;
-    margin: 1.6cm 1.5cm;
+    margin: 1.4cm 1.4cm 1.2cm 1.4cm;
   }
   @page :first {
-    margin-top: 1.2cm;
+    margin-top: 1cm;
   }
 }
 
