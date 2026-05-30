@@ -1001,11 +1001,11 @@ blockquote.press-quote footer a:hover {
 }
 .proj-hero-content { z-index: 2; }
 
-/* --- Frame counter: cinematic scroll-position indicator --- */
+/* --- Frame counter: cinematic scroll-position indicator (left side, stacks above reading-time) --- */
 .frame-counter {
   position: fixed;
-  bottom: 22px;
-  right: 26px;
+  bottom: 76px;
+  left: 26px;
   font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
   font-size: 0.62rem;
   font-weight: 400;
