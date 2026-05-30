@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Cristian Taraborrelli Studio — Productions</title>
+  <link>https://www.cristiantaraborrellistudio.net/</link>
+  <description>Opera, theatre, ceremonies, events. Three decades of stage and creative direction by Cristian Taraborrelli.</description>
+  <language>it-IT</language>
+  <copyright>© 2026 Cristian Taraborrelli Studio SRL</copyright>
+  <managingEditor>info@cristiantaraborrellistudio.net (Cristian Taraborrelli Studio)</managingEditor>
+  <webMaster>info@cristiantaraborrellistudio.net (Cristian Taraborrelli Studio)</webMaster>
+  <pubDate>Sat, 30 May 2026 22:00:00 +0200</pubDate>
+  <lastBuildDate>Sat, 30 May 2026 22:00:00 +0200</lastBuildDate>
+  <generator>Cristian Taraborrelli Studio</generator>
+  <category>Theatre</category>
+  <category>Opera</category>
+  <category>Scenography</category>
+  <atom:link href="https://www.cristiantaraborrellistudio.net/productions.rss" rel="self" type="application/rss+xml"/>
+  <image>
+    <url>https://www.cristiantaraborrellistudio.net/images/cristian-taraborrelli-portrait.jpg</url>
+    <title>Cristian Taraborrelli Studio</title>
+    <link>https://www.cristiantaraborrellistudio.net/</link>
+  </image>
+
+  <item>
+    <title>Pagliacci — AR Breaks into Opera</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/pagliacci.html</link>
+    <description>The world's first opera production with real-time 3D augmented reality. Pagliacci by Ruggero Leoncavallo at Teatro Carlo Felice, Genoa, 2021. Direction, set and lighting by Cristian Taraborrelli; costumes by Angela Buscemi; conductor Andriy Yurkevych. Broadcast by Rai 5 and available on RaiPlay. Documented in The Scenographer — Theatrical Notebooks (SCSA London, September 2022).</description>
+    <pubDate>Fri, 08 Oct 2021 20:00:00 +0200</pubDate>
+    <category>Opera</category>
+    <category>Augmented Reality</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/pagliacci.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-pagliacci.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>La Pietra del Paragone</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/pietra-del-paragone.html</link>
+    <description>Rossini's youthful comic masterpiece. Teatro Regio di Parma 2006, Théâtre du Châtelet Paris 2007 (Premio Franco Abbiati 2007) and 2014 revival. Direction by Giorgio Barberio Corsetti and Pierrick Sorin, conductor Jean-Christophe Spinosi with Ensemble Matheus. Costumes by Cristian Taraborrelli and Angela Buscemi; maquette supervision and 3D-printed set details by Cristian Taraborrelli.</description>
+    <pubDate>Mon, 22 Jan 2007 20:00:00 +0100</pubDate>
+    <category>Opera</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/pietra-del-paragone.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-pietra-del-paragone.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>La Belle Hélène</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/belle-helene.html</link>
+    <description>Offenbach's operetta at Théâtre du Châtelet, Paris 2015. Costume design by Cristian Taraborrelli (Golden Prague Awards Special Mention 2015).</description>
+    <pubDate>Thu, 22 Jan 2015 20:00:00 +0100</pubDate>
+    <category>Opera</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/belle-helene.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-belle-helene.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>Macbeth</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/macbeth.html</link>
+    <description>Verdi's opera at Teatro alla Scala di Milano, 2013. Costume design and video by Cristian Taraborrelli, on figurines by Angela Buscemi.</description>
+    <pubDate>Sat, 21 Sep 2013 20:00:00 +0200</pubDate>
+    <category>Opera</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/macbeth.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-macbeth.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>La Jura</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/la-jura.html</link>
+    <description>Gavino Gabriel's rediscovered Sardinian opera at Teatro Lirico di Cagliari, 2015. Direction, set and costume design by Cristian Taraborrelli — first reconstruction of the 1928 Cagliari premiere.</description>
+    <pubDate>Fri, 13 Nov 2015 20:00:00 +0100</pubDate>
+    <category>Opera</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/la-jura.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-la-jura.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>Il Processo di Kafka — Premio Ubu 1999</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/processo-kafka.html</link>
+    <description>Direction by Giorgio Barberio Corsetti; set and costume design by Cristian Taraborrelli. Premio Ubu 1999.</description>
+    <pubDate>Wed, 01 Sep 1999 20:00:00 +0200</pubDate>
+    <category>Theatre</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/processo-kafka.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-processo-kafka.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>Gertrude (Le Cri)</title>
+    <link>https://www.cristiantaraborrellistudio.net/theatre/gertrude-le-cri.html</link>
+    <description>Howard Barker. Direction by Giorgio Barberio Corsetti; set design by Cristian Taraborrelli. Prix du Syndicat de la Critique 2009 for best scenography. Nominated for Molière Awards.</description>
+    <pubDate>Sat, 10 Jan 2009 20:00:00 +0100</pubDate>
+    <category>Theatre</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/theatre/gertrude-le-cri.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/theatre-gertrude-le-cri.jpg" type="image/jpeg"/>
+  </item>
+
+  <item>
+    <title>Italian Souvenir — Milano Cortina 2026 Ceremonies</title>
+    <link>https://www.cristiantaraborrellistudio.net/ceremonies/italian-souvenir.html</link>
+    <description>Content supervision and creative role for the Paralympic ceremonies of Milano Cortina 2026.</description>
+    <pubDate>Fri, 13 Feb 2026 20:00:00 +0100</pubDate>
+    <category>Ceremonies</category>
+    <guid isPermaLink="true">https://www.cristiantaraborrellistudio.net/ceremonies/italian-souvenir.html</guid>
+    <enclosure url="https://www.cristiantaraborrellistudio.net/images/og/ceremonies-italian-souvenir.jpg" type="image/jpeg"/>
+  </item>
+
+</channel>
+</rss>
