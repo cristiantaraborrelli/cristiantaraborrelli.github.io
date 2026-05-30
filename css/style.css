@@ -1119,6 +1119,220 @@ blockquote.press-quote footer a:hover {
   .toc-side a { transition: none; }
 }
 
+/* =========================================================
+   ROUND 1 — Quick wins: reading progress, print, cinema hero, audio
+   ========================================================= */
+
+/* --- Reading progress bar + estimated reading time --- */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 100;
+  pointer-events: none;
+  background: transparent;
+}
+.reading-progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, var(--ink) 0%, var(--ink2) 100%);
+  transition: width 0.1s ease;
+}
+.reading-time {
+  position: fixed;
+  bottom: 22px;
+  left: 26px;
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(255,253,247,0.82);
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--muted2);
+  border-radius: 999px;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.reading-time.show { opacity: 0.85; }
+.reading-time .read-label { color: var(--muted); margin-right: 0.4em; }
+@media (max-width: 640px) { .reading-time { display: none; } }
+@media print { .reading-progress, .reading-time { display: none; } }
+
+/* --- Cinema-mode hero video: a muted ambient loop on top productions --- */
+/* JS adds .cinema-hero to .proj-hero of pages that opt-in via data-cinema-hero */
+.proj-hero video.cinema-hero {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.proj-hero video.cinema-hero.playing { opacity: 0.72; }
+
+/* --- Atmospheric audio toggle button --- */
+.audio-toggle {
+  position: fixed;
+  bottom: 22px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,253,247,0.82);
+  border: 1px solid var(--muted2);
+  cursor: pointer;
+  z-index: 65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+.audio-toggle.show { opacity: 0.92; transform: translateY(0); }
+.audio-toggle:hover { transform: translateY(-2px); }
+.audio-toggle svg { width: 18px; height: 18px; color: var(--ink); }
+.audio-toggle .playing-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+  opacity: 0;
+  pointer-events: none;
+}
+.audio-toggle.playing .playing-pulse {
+  animation: pulseRing 1.8s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+@media (max-width: 640px) { .audio-toggle { display: none; } }
+@media print { .audio-toggle { display: none; } }
+
+/* --- Lazy-load YouTube thumb (img placeholder instead of iframe until clicked) --- */
+.yt-lite {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0a0807;
+  cursor: pointer;
+  overflow: hidden;
+}
+.yt-lite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  transition: opacity 0.25s ease;
+}
+.yt-lite:hover img { opacity: 1; }
+.yt-lite::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  background: rgba(20,20,20,0.7);
+  border-radius: 14px;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+.yt-lite::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-38%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent #fff;
+  z-index: 3;
+}
+.yt-lite:hover::after { background: rgba(204,0,0,0.85); }
+.yt-lite iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 4;
+}
+
+/* =========================================================
+   PRINT STYLESHEET — professional, dossier-grade
+   ========================================================= */
+@media print {
+  /* Hide all UI chrome */
+  nav.nav, .footer, .lang-switcher, .frame-counter, .toc-side,
+  .reading-progress, .reading-time, .audio-toggle,
+  .nav-toggle, .home-cta-bar, .help-bubble {
+    display: none !important;
+  }
+  /* Reset hero — printable like editorial spread */
+  .proj-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    page-break-after: avoid;
+    background: white !important;
+  }
+  .proj-hero img { opacity: 0.6 !important; max-height: 14cm; object-fit: contain; }
+  .proj-hero-overlay { display: none; }
+  .proj-hero-content { position: static !important; padding: 0 0 1.5cm 0; color: #111 !important; }
+  .proj-hero-title { font-size: 3.2em !important; color: #111 !important; text-shadow: none !important; }
+  .proj-hero-cat, .proj-hero-sub, .proj-hero-meta { color: #444 !important; }
+
+  /* Body typography */
+  body { background: white !important; color: #111 !important; font-size: 11pt; }
+  .proj-body, main.page { padding: 1.5cm !important; max-width: 16cm !important; margin: 0 auto !important; }
+  .proj-sec { page-break-inside: avoid; margin-bottom: 1.2cm !important; }
+  .s-label { color: #111 !important; border-bottom: 1px solid #888 !important; padding-bottom: 4pt; font-size: 0.8em; }
+  p, li { font-size: 11pt !important; line-height: 1.55 !important; color: #222 !important; }
+  blockquote { border-left: 2pt solid #444 !important; padding-left: 0.6cm !important; color: #333 !important; }
+  cite, .proj-meta-label { color: #666 !important; }
+
+  /* Show URLs after links */
+  a[href]::after {
+    content: " [" attr(href) "]";
+    font-size: 8pt;
+    color: #888;
+    font-weight: normal;
+  }
+  a[href^="#"]::after, a[href^="javascript:"]::after { content: ""; }
+
+  /* Gallery: limit per page */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.3cm !important; }
+  .gallery-item { page-break-inside: avoid; }
+  .gallery-item img { max-height: 8cm; object-fit: contain; }
+
+  /* Video lite: replace with simple link */
+  .yt-lite, .video-embed iframe { display: none !important; }
+
+  /* Page break helpers */
+  h1, h2, h3 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+
+  /* Header / footer on every page */
+  @page {
+    size: A4;
+    margin: 2cm 1.5cm;
+  }
+}
+
 /* --- 404 page: "La commedia è finita" --- */
 .notfound {
   min-height: 100vh;

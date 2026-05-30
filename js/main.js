@@ -121,6 +121,108 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // === Reading Progress Bar + Estimated Reading Time ===
+  if (sections.length === undefined) var sections = document.querySelectorAll('.proj-sec');
+  if (document.querySelectorAll('.proj-sec').length >= 3) {
+    const pageText = (document.querySelector('.proj-body') || document.body).innerText || '';
+    const words = pageText.trim().split(/\s+/).length;
+    const wpm = 220;
+    const minutes = Math.max(1, Math.round(words / wpm));
+
+    // Progress bar
+    const bar = document.createElement('div');
+    bar.className = 'reading-progress';
+    bar.innerHTML = '<div class="reading-progress-bar"></div>';
+    document.body.appendChild(bar);
+    const barFill = bar.querySelector('.reading-progress-bar');
+
+    // Reading time pill (bottom-left)
+    const rt = document.createElement('div');
+    rt.className = 'reading-time';
+    rt.innerHTML = '<span class="read-label">Read</span><span class="read-min">' + minutes + ' min</span>';
+    document.body.appendChild(rt);
+
+    let rtVisible = false;
+    let rafScroll = null;
+    const updateRead = () => {
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docH > 0 ? Math.min(100, (window.scrollY / docH) * 100) : 0;
+      barFill.style.width = pct + '%';
+      const winH = window.innerHeight;
+      if (window.scrollY > winH * 0.5 && !rtVisible) { rt.classList.add('show'); rtVisible = true; }
+      else if (window.scrollY <= winH * 0.3 && rtVisible) { rt.classList.remove('show'); rtVisible = false; }
+    };
+    window.addEventListener('scroll', () => {
+      if (rafScroll) return;
+      rafScroll = requestAnimationFrame(() => { updateRead(); rafScroll = null; });
+    }, { passive: true });
+    updateRead();
+  }
+
+  // === Lazy-load YouTube embed: thumbnail + click-to-play ===
+  document.querySelectorAll('iframe[src*="youtube-nocookie.com/embed/"], iframe[src*="youtube.com/embed/"]').forEach(iframe => {
+    const src = iframe.getAttribute('src') || '';
+    const m = src.match(/\/embed\/([a-zA-Z0-9_\-]+)/);
+    if (!m) return;
+    const videoId = m[1];
+    const title = iframe.getAttribute('title') || 'Video';
+    const wrap = document.createElement('div');
+    wrap.className = 'yt-lite';
+    wrap.setAttribute('role', 'button');
+    wrap.setAttribute('aria-label', 'Play: ' + title);
+    wrap.tabIndex = 0;
+    wrap.innerHTML = '<img src="https://i.ytimg.com/vi/' + videoId + '/hqdefault.jpg" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy">';
+    iframe.parentNode.replaceChild(wrap, iframe);
+    const activate = () => {
+      const real = document.createElement('iframe');
+      real.src = src.includes('autoplay=') ? src : (src + (src.includes('?') ? '&' : '?') + 'autoplay=1');
+      real.title = title;
+      real.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      real.allowFullscreen = true;
+      wrap.appendChild(real);
+    };
+    wrap.addEventListener('click', activate, { once: true });
+    wrap.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } }, { once: true });
+  });
+
+  // === Atmospheric audio toggle (opt-in via data-atmo-audio on .proj-hero) ===
+  const hero2 = document.querySelector('.proj-hero[data-atmo-audio]');
+  if (hero2) {
+    const audioUrl = hero2.dataset.atmoAudio;
+    const audio = new Audio(audioUrl);
+    audio.loop = true;
+    audio.volume = 0.45;
+    const btn = document.createElement('button');
+    btn.className = 'audio-toggle';
+    btn.setAttribute('aria-label', 'Toggle ambient audio');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg><span class="playing-pulse"></span>';
+    document.body.appendChild(btn);
+    setTimeout(() => btn.classList.add('show'), 800);
+    btn.addEventListener('click', () => {
+      if (audio.paused) { audio.play().then(() => btn.classList.add('playing')).catch(() => {}); }
+      else { audio.pause(); btn.classList.remove('playing'); }
+    });
+  }
+
+  // === Cinema-mode hero video (opt-in via data-cinema-hero on .proj-hero) ===
+  const cinemaHero = document.querySelector('.proj-hero[data-cinema-hero]');
+  if (cinemaHero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const videoUrl = cinemaHero.dataset.cinemaHero;
+    const video = document.createElement('video');
+    video.className = 'cinema-hero';
+    video.src = videoUrl;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    const img = cinemaHero.querySelector('img');
+    if (img) cinemaHero.insertBefore(video, img.nextSibling);
+    else cinemaHero.appendChild(video);
+    video.addEventListener('canplay', () => {
+      video.play().then(() => video.classList.add('playing')).catch(() => {});
+    });
+  }
+
   // === Frame Counter: cinematic scroll-position indicator ===
   // Only on production/long pages: any page with >= 5 .proj-sec sections.
   const sections = document.querySelectorAll('.proj-sec');
