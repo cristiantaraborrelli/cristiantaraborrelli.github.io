@@ -1277,200 +1277,427 @@ blockquote.press-quote footer a:hover {
    PRINT STYLESHEET — professional, dossier-grade
    ========================================================= */
 @media print {
+  /* =========================================================
+     DOSSIER PDF — Editorial monograph layout
+     Inspired by museum catalogues + Phaidon art books.
+     Target: A4, 1-column, generous margins, justified type.
+     ========================================================= */
+
   /* Hide all UI chrome */
   nav.nav, .footer, .lang-switcher, .frame-counter, .toc-side,
   .reading-progress, .reading-time, .audio-toggle,
   .nav-toggle, .home-cta-bar, .help-bubble,
-  .reading-mode-toggle, .spotlight-toggle, .search-trigger, .dossier-btn {
+  .reading-mode-toggle, .spotlight-toggle, .search-trigger, .dossier-btn,
+  .back-link {
     display: none !important;
   }
 
-  /* CRITICAL: Force all reveal animations visible.
-     Without this, sections below the fold print BLANK because
-     IntersectionObserver hasn't added .visible to them yet. */
+  /* Force reveal animations visible (IntersectionObserver hasn't fired) */
   .reveal, .reveal-d1, .reveal-d2, .reveal-d3 {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
 
-  /* Reset hero — printable like editorial spread */
+  /* === COVER PAGE: hero becomes a proper monograph cover === */
   .proj-hero {
-    height: auto !important;
-    min-height: 0 !important;
-    page-break-after: avoid;
+    page-break-after: always !important;
+    break-after: page !important;
+    height: 25cm !important;
+    min-height: 25cm !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
     background: white !important;
     position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  .proj-hero img { opacity: 0.7 !important; max-height: 9cm; object-fit: contain; display: block; margin: 0 auto; }
-  .proj-hero-overlay, .proj-hero::after, .proj-hero video.cinema-hero { display: none !important; }
-  .proj-hero-content { position: static !important; padding: 0.3cm 0 0.5cm 0; color: #111 !important; }
-  .proj-hero-title { font-size: 2.4em !important; color: #111 !important; text-shadow: none !important; margin: 0 0 0.2cm 0 !important; }
-  .proj-hero-cat, .proj-hero-sub, .proj-hero-meta { color: #444 !important; }
+  .proj-hero img {
+    position: absolute !important;
+    top: 0 !important; left: 0 !important;
+    width: 100% !important;
+    height: 17cm !important;
+    object-fit: cover !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+  .proj-hero-overlay, .proj-hero::after, .proj-hero video.cinema-hero {
+    display: none !important;
+  }
+  .proj-hero-content {
+    position: relative !important;
+    margin-top: 18cm !important;
+    padding: 0 1.8cm !important;
+    color: #0a0a0a !important;
+    text-align: left !important;
+  }
+  .proj-hero-cat {
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-size: 8pt !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase !important;
+    color: #777 !important;
+    margin: 0 0 0.6cm 0 !important;
+    padding: 0 !important;
+  }
+  .proj-hero-title {
+    font-family: 'Georgia', 'Garamond', 'Times New Roman', serif !important;
+    font-size: 48pt !important;
+    font-weight: 400 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.01em !important;
+    color: #0a0a0a !important;
+    text-shadow: none !important;
+    margin: 0 0 0.3cm 0 !important;
+    padding: 0 !important;
+  }
+  .proj-hero-sub {
+    font-family: 'Georgia', serif !important;
+    font-style: italic !important;
+    font-size: 14pt !important;
+    color: #444 !important;
+    margin: 0 0 0.8cm 0 !important;
+    padding: 0 !important;
+  }
+  .proj-hero-meta {
+    font-family: 'Georgia', serif !important;
+    font-size: 9pt !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: #666 !important;
+    border-top: 0.5pt solid #999 !important;
+    padding-top: 0.4cm !important;
+    margin: 0 !important;
+  }
 
-  /* Body typography */
-  body { background: white !important; color: #111 !important; font-size: 10pt; }
-  .proj-body, main.page { padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
+  /* === BODY TYPOGRAPHY === */
+  body {
+    background: white !important;
+    color: #1a1a1a !important;
+    font-family: 'Georgia', 'Garamond', 'Times New Roman', serif !important;
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  .proj-body, main.page {
+    padding: 0 !important;
+    max-width: 14cm !important;
+    margin: 0 auto !important;
+  }
 
-  /* Sections: completely natural flow, no forced breaks.
-     With 20+ sections, page-break-inside:avoid creates white-space at page bottoms.
-     break-inside:auto allows the renderer to slice anywhere it likes. */
+  /* === SECTIONS — each is a chapter === */
   .proj-sec {
-    margin-bottom: 0.4cm !important;
+    margin: 0 0 0.7cm 0 !important;
+    padding: 0 !important;
     orphans: 3;
     widows: 3;
     break-inside: auto !important;
     page-break-inside: auto !important;
-    break-before: auto !important;
-    page-break-before: auto !important;
-    break-after: auto !important;
-    page-break-after: auto !important;
   }
-  /* Last 2 sections: no margin to avoid trailing blank page */
   .proj-body > .proj-sec:nth-last-child(-n+2),
   .proj-body > .proj-sec:last-child {
     margin-bottom: 0 !important;
-    page-break-after: auto !important;
   }
-  /* s-label: NO page-break-after:avoid — was causing labels to jump to next page,
-     leaving white space at the bottom of previous page. */
+
+  /* Chapter label (s-label) — editorial small caps */
   .s-label {
-    color: #111 !important;
-    border-bottom: 1px solid #888 !important;
-    padding-bottom: 2pt;
-    font-size: 0.75em;
-    margin-bottom: 0.25cm !important;
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-size: 8.5pt !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
+    color: #0a0a0a !important;
+    border: none !important;
+    border-top: 0.5pt solid #0a0a0a !important;
+    border-bottom: none !important;
+    padding: 0.35cm 0 0 0 !important;
+    margin: 0.5cm 0 0.45cm 0 !important;
+    text-align: left !important;
   }
-  p, li { font-size: 10pt !important; line-height: 1.45 !important; color: #222 !important; orphans: 2; widows: 2; }
-  blockquote { border-left: 2pt solid #444 !important; padding-left: 0.4cm !important; color: #333 !important; orphans: 2; widows: 2; margin: 0.3cm 0 !important; }
-  cite, .proj-meta-label { color: #666 !important; page-break-before: avoid !important; break-before: avoid !important; }
-  /* Citation lines (the small uppercase author attribution under blockquotes) must
-     stay glued to the preceding quote to avoid orphan trailing pages. */
-  blockquote + p,
-  .proj-sec p[style*="0.75rem"],
-  .proj-sec p[style*="0.7rem"][style*="uppercase"] {
+  .proj-sec:first-of-type .s-label,
+  .proj-body > .proj-sec:nth-child(2) .s-label {
+    margin-top: 0.3cm !important;
+  }
+
+  /* === BODY PARAGRAPHS === */
+  p {
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-size: 10.5pt !important;
+    line-height: 1.6 !important;
+    color: #1a1a1a !important;
+    margin: 0 0 0.32cm 0 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    -webkit-hyphens: auto !important;
+    hyphens: auto !important;
+    hyphenate-limit-chars: 6 3 3;
+    orphans: 3;
+    widows: 3;
+  }
+  li {
+    font-family: 'Georgia', serif !important;
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+    color: #1a1a1a !important;
+    orphans: 2; widows: 2;
+  }
+
+  /* === DROP CAP on intro first paragraph === */
+  .proj-intro-text > div:not([style*="display: none"]) > p:first-of-type::first-letter,
+  .proj-intro-text > div:not([style*="display: none"]) p:first-of-type::first-letter {
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-size: 50pt !important;
+    line-height: 0.85 !important;
+    float: left !important;
+    padding: 4pt 6pt 0 0 !important;
+    margin: 0 !important;
+    color: #0a0a0a !important;
+    font-weight: 400 !important;
+  }
+
+  /* === PULL QUOTES — editorial pull-quote style === */
+  blockquote {
+    border: none !important;
+    border-top: 0.5pt solid #444 !important;
+    border-bottom: 0.5pt solid #444 !important;
+    padding: 0.45cm 1cm !important;
+    margin: 0.7cm 0.5cm !important;
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-style: italic !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    color: #1a1a1a !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  /* In-text manifesto-style left-bordered quotes */
+  div[style*="border-left:3px solid"] {
+    border-left: 1.5pt solid #0a0a0a !important;
+    padding-left: 0.6cm !important;
+    margin: 0.5cm 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  div[style*="border-left:2px solid"] {
+    border-left: 0.75pt solid #999 !important;
+    padding-left: 0.5cm !important;
+    margin: 0.35cm 0 !important;
+    /* NO break-inside avoid on small bullets — they're small enough to flow
+       naturally and avoid orphan trailing pages. */
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  cite, .proj-meta-label {
+    color: #666 !important;
+    font-family: 'Georgia', serif !important;
     page-break-before: avoid !important;
     break-before: avoid !important;
   }
-  /* Keep the entire last apparatus-critique block on one page to prevent the
-     final attribution line from spilling onto an otherwise blank page. */
+  blockquote + p,
+  .proj-sec p[style*="0.75rem"][style*="uppercase"],
+  .proj-sec p[style*="0.7rem"][style*="uppercase"] {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    font-family: 'Georgia', serif !important;
+    font-size: 8pt !important;
+    letter-spacing: 0.18em !important;
+    color: #777 !important;
+    text-align: right !important;
+    margin-top: 0.2cm !important;
+  }
   .proj-body > .proj-sec:nth-last-child(-n+3) > div > div {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
-  /* Intro: disable grid layout, stack vertically */
+  /* === INTRO BLOCK — editorial opening === */
   .proj-intro {
     display: block !important;
     grid-template-columns: none !important;
     gap: 0 !important;
-    padding-bottom: 0.4cm !important;
-    margin-bottom: 0.4cm !important;
-    border-bottom: 1px solid #ccc !important;
+    padding-bottom: 0.6cm !important;
+    margin-bottom: 0.6cm !important;
+    border-bottom: 0.5pt solid #999 !important;
   }
-  .proj-intro-text { max-width: 100% !important; margin-bottom: 0.4cm !important; }
-  .proj-intro-text p { max-width: 100% !important; }
-  .proj-meta {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 0.25cm 0.6cm !important;
-    margin-top: 0.3cm !important;
+  .proj-intro-text { max-width: 100% !important; margin-bottom: 0.5cm !important; }
+  .proj-intro-text p {
+    max-width: 100% !important;
+    font-size: 11pt !important;
+    line-height: 1.65 !important;
+    color: #1a1a1a !important;
+    text-align: justify !important;
+    margin: 0 0 0.32cm 0 !important;
   }
-  .proj-meta > div { flex: 0 1 calc(50% - 0.3cm); margin: 0 !important; }
-  .proj-meta-label { font-size: 0.5rem !important; margin-bottom: 0.05cm !important; }
-  .proj-meta-val { font-size: 0.78rem !important; line-height: 1.3 !important; }
 
-  /* Team list: compact rows so cast/credits don't waste a full page */
-  .team-list { width: 100% !important; }
+  /* === META TABLE — like a museum wall label === */
+  .proj-meta {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.25cm 1cm !important;
+    margin: 0.5cm 0 0 0 !important;
+    padding: 0.4cm 0 0 0 !important;
+    border-top: 0.5pt solid #999 !important;
+  }
+  .proj-meta > div { margin: 0 !important; break-inside: avoid !important; }
+  .proj-meta-label {
+    font-family: 'Georgia', serif !important;
+    font-size: 7pt !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #888 !important;
+    margin: 0 0 0.05cm 0 !important;
+    font-weight: 400 !important;
+  }
+  .proj-meta-val {
+    font-family: 'Georgia', serif !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    color: #1a1a1a !important;
+  }
+
+  /* === TEAM LIST — credits table === */
+  .team-list {
+    width: 100% !important;
+    border-top: 0.5pt solid #444 !important;
+    margin: 0.3cm 0 0 0 !important;
+  }
   .team-row {
     display: grid !important;
-    grid-template-columns: 1fr 1.5fr !important;
-    padding: 0.12cm 0 !important;
-    border-bottom: 1px solid #ddd !important;
+    grid-template-columns: 5cm 1fr !important;
+    padding: 0.14cm 0 !important;
+    border-bottom: 0.25pt solid #ccc !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
   .team-row:hover { padding-left: 0 !important; background: transparent !important; }
-  .team-role { font-size: 7.5pt !important; color: #555 !important; letter-spacing: 0.06em !important; }
-  .team-name { font-size: 9.5pt !important; line-height: 1.3 !important; color: #111 !important; }
-
-  /* Show URLs after links */
-  a[href]::after {
-    content: " [" attr(href) "]";
-    font-size: 7pt;
-    color: #999;
-    font-weight: normal;
-    word-wrap: break-word;
+  .team-row.feat .team-name { font-style: italic !important; }
+  .team-role {
+    font-family: 'Georgia', serif !important;
+    font-size: 7.5pt !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: #555 !important;
+    align-self: center !important;
   }
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after,
-  a[href^="mailto:"]::after,
-  .tag::after,
-  .related-card a::after { content: ""; }
+  .team-name {
+    font-family: 'Georgia', serif !important;
+    font-size: 10pt !important;
+    line-height: 1.35 !important;
+    color: #0a0a0a !important;
+  }
 
-  /* Gallery: use multicolumn to AVOID half-empty last pages.
-     CSS multicol fills each column completely before flowing to the next,
-     so gallery images compact tightly without leaving white space below. */
+  /* === LINKS — no inline URLs (too noisy editorially) === */
+  a[href]::after { content: "" !important; }
+  a { color: #0a0a0a !important; text-decoration: none !important; border-bottom: 0.25pt solid #999 !important; }
+
+  /* === GALLERY — masonry-style editorial spread === */
   .gallery-grid {
     display: block !important;
     column-count: 2 !important;
-    column-gap: 0.3cm !important;
+    column-gap: 0.4cm !important;
     grid-template-columns: none !important;
+    margin: 0.4cm 0 !important;
   }
   .gallery-item {
     display: block !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-    margin: 0 0 0.3cm 0 !important;
+    margin: 0 0 0.4cm 0 !important;
     aspect-ratio: auto !important;
     background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   .gallery-item picture, .gallery-item img {
     display: block !important;
     width: 100% !important;
     height: auto !important;
-    max-height: 5.5cm !important;
+    max-height: 6cm !important;
     object-fit: contain !important;
+    border: 0.25pt solid #ddd !important;
   }
-  .gallery-item figcaption { font-size: 7.5pt !important; color: #666 !important; }
-
+  .gallery-item figcaption {
+    font-family: 'Georgia', serif !important;
+    font-size: 7pt !important;
+    font-style: italic !important;
+    color: #777 !important;
+    text-align: center !important;
+    margin-top: 2pt !important;
+  }
   /* Figurini section: 3-col multicol so 9 figurini fit nicely */
   .proj-sec .gallery-grid[style*="repeat(3"] {
     column-count: 3 !important;
   }
+  .proj-sec .gallery-grid[style*="repeat(3"] .gallery-item img {
+    max-height: 5cm !important;
+  }
 
-  /* Video embeds: hide entirely */
+  /* === VIDEO — hide embeds (not printable) === */
   .yt-lite, .video-embed iframe, .video-embed { display: none !important; }
   .video-grid, .video-item { display: none !important; }
 
-  /* Tags row: hide. The tag pillars spill across pages and create
-     near-empty trailing pages. Tags are for web discovery, not dossier value. */
+  /* === HIDE NOISE === */
+  /* Tags: web-discovery only, no editorial value */
   .tags-row, .tag { display: none !important; }
-  /* Hide the tags wrapper section entirely so the s-label "Tag" doesn't print alone */
   .proj-sec:has(> .tags-row) { display: none !important; }
-
-  /* Related productions + next-prev navigation: not part of dossier */
+  /* Related productions + next-prev: not part of dossier */
   .related-productions, .next-prev-nav,
   .related-grid, .related-card { display: none !important; }
-
-  /* Hide empty proj-sec wrappers */
+  /* Empty wrappers */
   .proj-sec:empty { display: none !important; }
-
-  /* Page break helpers — h1 only (h2/h3 break-after avoid creates trailing whitespace) */
-  h1 { page-break-after: avoid; break-after: avoid; }
-  table { page-break-inside: avoid; break-inside: avoid; font-size: 9pt !important; }
-
-  /* Hidden language blocks: respect inline display:none set by lang.js */
+  /* Hidden language blocks */
   [data-lang-block][style*="display: none"] { display: none !important; }
 
-  /* Print page setup */
+  /* === H1/H2 (rare in proj-body, but be safe) === */
+  h1, h2, h3 {
+    font-family: 'Georgia', 'Garamond', serif !important;
+    font-weight: 400 !important;
+    color: #0a0a0a !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  h2 { font-size: 16pt !important; margin: 0.6cm 0 0.3cm !important; }
+  h3 { font-size: 12pt !important; margin: 0.4cm 0 0.2cm !important; font-style: italic !important; }
+  table { page-break-inside: avoid; break-inside: avoid; font-size: 9pt !important; }
+
+  /* === PAGE SETUP — generous editorial margins, running header + page number === */
   @page {
     size: A4;
-    margin: 1.4cm 1.4cm 1.2cm 1.4cm;
+    margin: 2.2cm 1.8cm 2cm 1.8cm;
+
+    @top-center {
+      content: "CRISTIAN TARABORRELLI \2014 STUDIO DOSSIER";
+      font-family: 'Georgia', serif;
+      font-size: 7pt;
+      letter-spacing: 0.32em;
+      color: #999;
+      padding-bottom: 0.5cm;
+    }
+    @bottom-center {
+      content: counter(page);
+      font-family: 'Georgia', serif;
+      font-size: 9pt;
+      color: #555;
+      padding-top: 0.5cm;
+    }
+    @bottom-right {
+      content: "cristiantaraborrellistudio.net";
+      font-family: 'Georgia', serif;
+      font-size: 6.5pt;
+      font-style: italic;
+      color: #aaa;
+      padding-top: 0.5cm;
+    }
   }
+  /* Cover page: NO running header / page number */
   @page :first {
-    margin-top: 1cm;
+    margin: 0 !important;
+    @top-center { content: "" !important; }
+    @bottom-center { content: "" !important; }
+    @bottom-right { content: "" !important; }
   }
 }
 
