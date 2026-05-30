@@ -1478,7 +1478,7 @@ body.spotlight-active .proj-body .spot-active::before {
 .spotlight-toggle {
   position: fixed;
   bottom: 22px;
-  right: 136px;
+  right: 192px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1510,7 +1510,7 @@ body.spotlight-active .spotlight-toggle svg { color: #fbf8f1; }
 .dossier-btn {
   position: fixed;
   bottom: 22px;
-  right: 192px;
+  right: 248px;
   height: 44px;
   padding: 0 1.1rem;
   border-radius: 999px;
@@ -1596,26 +1596,27 @@ body.spotlight-active .spotlight-toggle svg { color: #fbf8f1; }
    ========================================================= */
 .search-trigger {
   position: fixed;
-  top: 1.4rem;
-  right: 1.4rem;
-  width: 38px;
-  height: 38px;
+  bottom: 22px;
+  right: 136px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255,253,247,0.7);
+  background: rgba(255,253,247,0.82);
   border: 1px solid var(--muted2);
   cursor: pointer;
-  z-index: 80;
+  z-index: 65;
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.2s ease;
+  transition: opacity 0.4s ease, transform 0.25s ease;
+  transform: translateY(8px);
 }
-.search-trigger.show { opacity: 0.85; }
-.search-trigger:hover { transform: scale(1.06); opacity: 1; }
-.search-trigger svg { width: 16px; height: 16px; color: var(--ink); }
+.search-trigger.show { opacity: 0.92; transform: translateY(0); }
+.search-trigger:hover { transform: translateY(-2px); }
+.search-trigger svg { width: 18px; height: 18px; color: var(--ink); }
 @media print { .search-trigger { display: none; } }
 
 .search-overlay {
