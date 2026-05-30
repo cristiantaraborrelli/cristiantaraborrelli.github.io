@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mounted only on production pages with >= 5 .proj-sec sections.
   // Reads each section's .s-label as the entry title; smooth-scrolls; highlights active via IntersectionObserver.
   const tocSections = document.querySelectorAll('.proj-sec');
-  if (tocSections.length >= 5 && window.matchMedia('(min-width: 1281px)').matches) {
+  if (tocSections.length >= 5 && window.matchMedia('(min-width: 1620px)').matches) {
     const labels = [];
     tocSections.forEach((sec, i) => {
       const lab = sec.querySelector('.s-label');

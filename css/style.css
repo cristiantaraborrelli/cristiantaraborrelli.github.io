@@ -1110,7 +1110,7 @@ blockquote.press-quote footer a:hover {
   padding-left: 1.8rem;
 }
 .toc-side a.active::before { color: var(--ink); }
-@media (max-width: 1280px) {
+@media (max-width: 1619px) {
   .toc-side { display: none; }
 }
 @media print { .toc-side { display: none; } }
