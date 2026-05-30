@@ -1,10 +1,15 @@
 // CRISTIANTARABORRELLISTUDIO — main.js
 
-// === Service Worker registration (offline reading + instant repeat visits) ===
+// === Service Worker NEUTRALIZED (mobile regression rollback 30/05/2026) ===
+// Existing SW (if any) loads /sw.js which is now a kill-switch that
+// unregisters itself and clears all caches. New visitors don't register.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
-  });
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((r) => r.unregister().catch(() => {}));
+  }).catch(() => {});
+  if ('caches' in window) {
+    caches.keys().then((names) => names.forEach((n) => caches.delete(n))).catch(() => {});
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -129,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // === Reading Progress Bar + Estimated Reading Time ===
-  if (sections.length === undefined) var sections = document.querySelectorAll('.proj-sec');
   if (document.querySelectorAll('.proj-sec').length >= 3) {
     const pageText = (document.querySelector('.proj-body') || document.body).innerText || '';
     const words = pageText.trim().split(/\s+/).length;
