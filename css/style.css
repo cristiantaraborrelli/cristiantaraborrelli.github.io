@@ -1333,6 +1333,211 @@ blockquote.press-quote footer a:hover {
   }
 }
 
+/* =========================================================
+   ROUND 3 — Reading mode, Spotlight diagonal, Dossier PDF
+   ========================================================= */
+
+/* --- Reading mode: distraction-free editorial view --- */
+body.reading-mode nav.nav,
+body.reading-mode .footer,
+body.reading-mode .toc-side,
+body.reading-mode .frame-counter,
+body.reading-mode .audio-toggle,
+body.reading-mode .proj-hero img,
+body.reading-mode .proj-hero-overlay,
+body.reading-mode .gallery-grid,
+body.reading-mode .video-grid,
+body.reading-mode .yt-lite,
+body.reading-mode .team-list,
+body.reading-mode .tags-row,
+body.reading-mode .next-prev-nav {
+  display: none !important;
+}
+body.reading-mode .proj-hero {
+  height: auto !important;
+  min-height: 0 !important;
+  background: transparent !important;
+  margin-bottom: 2rem;
+}
+body.reading-mode .proj-hero-content {
+  position: static !important;
+  padding: 4rem 0 0;
+  color: var(--ink) !important;
+}
+body.reading-mode .proj-hero-title {
+  color: var(--ink) !important;
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+}
+body.reading-mode .proj-hero-cat,
+body.reading-mode .proj-hero-sub,
+body.reading-mode .proj-hero-meta {
+  color: var(--muted) !important;
+}
+body.reading-mode {
+  background: #fbf8f1 !important;
+}
+body.reading-mode .proj-body {
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem 6rem !important;
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+}
+body.reading-mode .proj-meta,
+body.reading-mode .proj-intro {
+  display: block !important;
+}
+body.reading-mode p,
+body.reading-mode li {
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+  color: #2a2624 !important;
+}
+body.reading-mode .s-label {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.2em !important;
+}
+
+/* Reading-mode toggle button */
+.reading-mode-toggle {
+  position: fixed;
+  bottom: 22px;
+  right: 80px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,253,247,0.82);
+  border: 1px solid var(--muted2);
+  cursor: pointer;
+  z-index: 65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+.reading-mode-toggle.show { opacity: 0.92; transform: translateY(0); }
+.reading-mode-toggle:hover { transform: translateY(-2px); }
+.reading-mode-toggle svg { width: 18px; height: 18px; color: var(--ink); }
+body.reading-mode .reading-mode-toggle {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+body.reading-mode .reading-mode-toggle svg { color: #fbf8f1; }
+@media (max-width: 640px) { .reading-mode-toggle { display: none; } }
+@media print { .reading-mode-toggle { display: none; } }
+
+/* --- Spotlight diagonale animato: paragraph in focus glows softly --- */
+.proj-body p,
+.proj-body li,
+.proj-body blockquote,
+.proj-body .s-label {
+  transition: opacity 0.6s ease, color 0.6s ease;
+}
+body.spotlight-active .proj-body p:not(.spot-active),
+body.spotlight-active .proj-body li:not(.spot-active),
+body.spotlight-active .proj-body blockquote:not(.spot-active) {
+  opacity: 0.42;
+}
+body.spotlight-active .proj-body .spot-active {
+  opacity: 1;
+  position: relative;
+}
+body.spotlight-active .proj-body .spot-active::before {
+  content: '';
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom,
+              rgba(255,230,180,0) 0%,
+              rgba(255,230,180,0.7) 50%,
+              rgba(255,230,180,0) 100%);
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  body.spotlight-active .proj-body p:not(.spot-active),
+  body.spotlight-active .proj-body li:not(.spot-active),
+  body.spotlight-active .proj-body blockquote:not(.spot-active) {
+    opacity: 0.55;
+  }
+  body.spotlight-active .proj-body .spot-active::before { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.spotlight-active .proj-body p,
+  body.spotlight-active .proj-body li,
+  body.spotlight-active .proj-body blockquote { opacity: 1 !important; }
+}
+@media print { body.spotlight-active .proj-body p { opacity: 1 !important; } }
+
+/* Spotlight toggle button — same row as reading mode and audio */
+.spotlight-toggle {
+  position: fixed;
+  bottom: 22px;
+  right: 136px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,253,247,0.82);
+  border: 1px solid var(--muted2);
+  cursor: pointer;
+  z-index: 65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+.spotlight-toggle.show { opacity: 0.92; transform: translateY(0); }
+.spotlight-toggle:hover { transform: translateY(-2px); }
+.spotlight-toggle svg { width: 18px; height: 18px; color: var(--ink); }
+body.spotlight-active .spotlight-toggle {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+body.spotlight-active .spotlight-toggle svg { color: #fbf8f1; }
+@media (max-width: 900px) { .spotlight-toggle { display: none; } }
+@media print { .spotlight-toggle { display: none; } }
+
+/* --- Dossier-PDF button (uses native print-to-pdf via window.print) --- */
+.dossier-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 192px;
+  height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  z-index: 65;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fbf8f1;
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+.dossier-btn.show { opacity: 0.92; transform: translateY(0); }
+.dossier-btn:hover { transform: translateY(-2px); background: var(--ink2); }
+.dossier-btn svg { width: 14px; height: 14px; }
+@media (max-width: 900px) { .dossier-btn { display: none; } }
+@media print { .dossier-btn { display: none; } }
+
 /* --- 404 page: "La commedia è finita" --- */
 .notfound {
   min-height: 100vh;

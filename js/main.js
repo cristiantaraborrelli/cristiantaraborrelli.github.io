@@ -223,6 +223,81 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === Reading mode toggle (distraction-free editorial view) ===
+  if (document.querySelectorAll('.proj-sec').length >= 3) {
+    const btnR = document.createElement('button');
+    btnR.className = 'reading-mode-toggle';
+    btnR.setAttribute('aria-label', 'Toggle reading mode');
+    btnR.title = 'Reading mode';
+    btnR.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>';
+    document.body.appendChild(btnR);
+    setTimeout(() => btnR.classList.add('show'), 1100);
+    btnR.addEventListener('click', () => {
+      document.body.classList.toggle('reading-mode');
+      // Disable spotlight while reading-mode is on
+      if (document.body.classList.contains('reading-mode')) {
+        document.body.classList.remove('spotlight-active');
+      }
+    });
+  }
+
+  // === Spotlight diagonale: highlight the paragraph closest to viewport center ===
+  const proseEls = Array.from(document.querySelectorAll('.proj-body p, .proj-body li, .proj-body blockquote'));
+  if (proseEls.length >= 10 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const btnS = document.createElement('button');
+    btnS.className = 'spotlight-toggle';
+    btnS.setAttribute('aria-label', 'Toggle reading spotlight');
+    btnS.title = 'Spotlight';
+    btnS.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+    document.body.appendChild(btnS);
+    setTimeout(() => btnS.classList.add('show'), 1300);
+
+    let spotRaf = null;
+    let lastActive = null;
+    const updateSpotlight = () => {
+      if (!document.body.classList.contains('spotlight-active')) return;
+      const mid = window.innerHeight / 2;
+      let best = null;
+      let bestDist = Infinity;
+      proseEls.forEach(el => {
+        const r = el.getBoundingClientRect();
+        const c = (r.top + r.bottom) / 2;
+        const d = Math.abs(c - mid);
+        if (d < bestDist) { bestDist = d; best = el; }
+      });
+      if (best && best !== lastActive) {
+        if (lastActive) lastActive.classList.remove('spot-active');
+        best.classList.add('spot-active');
+        lastActive = best;
+      }
+    };
+    window.addEventListener('scroll', () => {
+      if (spotRaf) return;
+      spotRaf = requestAnimationFrame(() => { updateSpotlight(); spotRaf = null; });
+    }, { passive: true });
+    btnS.addEventListener('click', () => {
+      document.body.classList.toggle('spotlight-active');
+      if (document.body.classList.contains('spotlight-active')) updateSpotlight();
+      else if (lastActive) { lastActive.classList.remove('spot-active'); lastActive = null; }
+    });
+  }
+
+  // === Dossier PDF button — triggers native window.print() with our print stylesheet ===
+  if (document.querySelectorAll('.proj-sec').length >= 5) {
+    const btnP = document.createElement('button');
+    btnP.className = 'dossier-btn';
+    btnP.setAttribute('aria-label', 'Generate dossier PDF');
+    btnP.title = 'Save / print dossier PDF';
+    btnP.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg><span>Dossier PDF</span>';
+    document.body.appendChild(btnP);
+    setTimeout(() => btnP.classList.add('show'), 1500);
+    btnP.addEventListener('click', () => {
+      // Disable reading-mode/spotlight before printing so all content is visible
+      document.body.classList.remove('reading-mode', 'spotlight-active');
+      setTimeout(() => window.print(), 80);
+    });
+  }
+
   // === Frame Counter: cinematic scroll-position indicator ===
   // Only on production/long pages: any page with >= 5 .proj-sec sections.
   const sections = document.querySelectorAll('.proj-sec');
