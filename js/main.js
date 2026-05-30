@@ -305,6 +305,135 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === Semantic search overlay (⌘K / Ctrl+K) ===
+  (function setupSearch() {
+    let index = null;
+    let loading = false;
+
+    const trigger = document.createElement('button');
+    trigger.className = 'search-trigger';
+    trigger.setAttribute('aria-label', 'Search productions');
+    trigger.title = 'Search (⌘K)';
+    trigger.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+    document.body.appendChild(trigger);
+    setTimeout(() => trigger.classList.add('show'), 1700);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'search-overlay';
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('role', 'dialog');
+    overlay.innerHTML = `
+      <div class="search-overlay-inner">
+        <div class="search-input-wrap">
+          <input class="search-input" type="search" placeholder="Cerca produzioni, collaboratori, teatri, anni…" autocomplete="off">
+        </div>
+        <p class="search-hint">⏎ to open · Esc to close · ↑↓ to navigate</p>
+        <div class="search-results"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    const input = overlay.querySelector('.search-input');
+    const resultsEl = overlay.querySelector('.search-results');
+    let currentResults = [];
+    let focusedIdx = -1;
+
+    function open() {
+      overlay.classList.add('open');
+      input.value = '';
+      resultsEl.innerHTML = '';
+      ensureIndex().then(() => {
+        renderResults('');
+        setTimeout(() => input.focus(), 30);
+      });
+    }
+    function close() { overlay.classList.remove('open'); }
+    trigger.addEventListener('click', open);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (overlay.classList.contains('open')) close(); else open();
+      } else if (e.key === 'Escape' && overlay.classList.contains('open')) {
+        close();
+      }
+    });
+
+    async function ensureIndex() {
+      if (index || loading) return;
+      loading = true;
+      try {
+        const r = await fetch('/search-index.json');
+        index = await r.json();
+      } catch (e) { index = []; }
+      loading = false;
+    }
+
+    function scoreEntry(e, q) {
+      if (!q) return 1; // show all on empty
+      const ql = q.toLowerCase();
+      const tokens = ql.split(/\s+/).filter(Boolean);
+      let s = 0;
+      const blob = (e.title + ' ' + e.subtitle + ' ' + e.description + ' ' + e.intro + ' ' + e.keywords.join(' ') + ' ' + (e.year || '')).toLowerCase();
+      for (const t of tokens) {
+        if (e.title.toLowerCase().includes(t)) s += 8;
+        if (e.subtitle.toLowerCase().includes(t)) s += 5;
+        if (e.keywords.some(k => k.includes(t))) s += 4;
+        if (blob.includes(t)) s += 2;
+      }
+      return s;
+    }
+
+    function renderResults(q) {
+      if (!index) { resultsEl.innerHTML = '<p class="search-empty">Loading…</p>'; return; }
+      const scored = index.map(e => ({ e, s: scoreEntry(e, q) })).filter(x => x.s > 0);
+      scored.sort((a, b) => b.s - a.s);
+      currentResults = scored.slice(0, 30).map(x => x.e);
+      focusedIdx = -1;
+      if (!currentResults.length) {
+        resultsEl.innerHTML = '<p class="search-empty">Nessuna produzione trovata per «' + q + '»</p>';
+        return;
+      }
+      resultsEl.innerHTML = currentResults.map((e, i) =>
+        `<a class="search-result-item" href="${e.url}" data-idx="${i}">
+          <div class="search-result-thumb"><img src="${e.hero || ''}" alt=""></div>
+          <div class="search-result-body">
+            <p class="search-result-year">${e.year || ''} · ${e.type}</p>
+            <p class="search-result-title">${e.title}</p>
+            <p class="search-result-sub">${e.subtitle || ''}</p>
+          </div>
+        </a>`
+      ).join('');
+    }
+
+    let debounce;
+    input.addEventListener('input', (e) => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => renderResults(e.target.value.trim()), 80);
+    });
+    input.addEventListener('keydown', (e) => {
+      const items = resultsEl.querySelectorAll('.search-result-item');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        focusedIdx = Math.min(items.length - 1, focusedIdx + 1);
+        items.forEach((el, i) => el.classList.toggle('focused', i === focusedIdx));
+        items[focusedIdx]?.scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        focusedIdx = Math.max(0, focusedIdx - 1);
+        items.forEach((el, i) => el.classList.toggle('focused', i === focusedIdx));
+        items[focusedIdx]?.scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') {
+        if (focusedIdx >= 0 && items[focusedIdx]) {
+          e.preventDefault();
+          items[focusedIdx].click();
+        } else if (currentResults[0]) {
+          e.preventDefault();
+          window.location.href = currentResults[0].url;
+        }
+      }
+    });
+  })();
+
   // === Frame Counter: cinematic scroll-position indicator ===
   // Only on production/long pages: any page with >= 5 .proj-sec sections.
   const sections = document.querySelectorAll('.proj-sec');
