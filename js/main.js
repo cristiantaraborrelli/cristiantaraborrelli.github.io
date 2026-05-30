@@ -1,5 +1,12 @@
 // CRISTIANTARABORRELLISTUDIO — main.js
 
+// === Service Worker registration (offline reading + instant repeat visits) ===
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll reveal
