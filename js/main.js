@@ -305,7 +305,16 @@ document.addEventListener('DOMContentLoaded', () => {
     btnP.addEventListener('click', () => {
       // Disable reading-mode/spotlight before printing so all content is visible
       document.body.classList.remove('reading-mode', 'spotlight-active');
-      setTimeout(() => window.print(), 80);
+      // CRITICAL: force-mark ALL .reveal sections as .visible.
+      // IntersectionObserver only marks sections that have been scrolled into view —
+      // without this, sections below the fold print as BLANK PAGES (opacity:0).
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      // Also force any cinema-hero video off (it's display:none in print but be safe)
+      document.querySelectorAll('.proj-hero video.cinema-hero').forEach(v => {
+        try { v.pause(); } catch (e) {}
+      });
+      // Give the browser a tick to apply the class changes, then print
+      setTimeout(() => window.print(), 150);
     });
   }
 
