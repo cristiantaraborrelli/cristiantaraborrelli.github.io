@@ -1313,6 +1313,14 @@ blockquote.press-quote footer a:hover {
     margin: 0 !important;
     padding: 0 !important;
   }
+  /* Hero without image (gradient-only cover): the standard 25cm cover
+     with title pinned to the bottom is intentional editorial layout
+     (Phaidon-style cover anchor). The upper half white space is part
+     of the design, not a defect. The class is opt-in for any future
+     gradient-cover-specific tweaks. */
+  .proj-hero.cover-gradient {
+    /* reserved for future targeted overrides */
+  }
   .proj-hero img {
     position: absolute !important;
     top: 0 !important; left: 0 !important;
@@ -1540,6 +1548,13 @@ blockquote.press-quote footer a:hover {
   .proj-body > .proj-sec:nth-last-child(-n+3) > div > div {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+  }
+  /* Last child of a proj-sec (typically a trailing footnote/credit line)
+     must stay with the preceding content, not get pushed to a new page. */
+  .proj-sec > p:last-child,
+  .proj-sec > div > p:last-child {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
   }
 
   /* === INTRO BLOCK — editorial opening === */
