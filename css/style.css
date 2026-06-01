@@ -677,6 +677,30 @@ blockquote.press-quote footer a:hover {
   gap: 3px;
 }
 
+/* Storyboard grid — dense layout for long bozzetti sequences */
+.gallery-grid.storyboard-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.storyboard-grid .gallery-item {
+  aspect-ratio: 5/4;
+  background: var(--bg);
+}
+.storyboard-grid .gallery-item img {
+  opacity: 1;
+}
+.storyboard-grid figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.35rem 0.2rem 0;
+  font-style: italic;
+}
+@media (max-width: 900px) { .gallery-grid.storyboard-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .gallery-grid.storyboard-grid { grid-template-columns: repeat(2, 1fr); } }
+
 .gallery-item {
   aspect-ratio: 4/3;
   overflow: hidden;
@@ -1697,6 +1721,43 @@ blockquote.press-quote footer a:hover {
   }
   .proj-sec .gallery-grid[style*="repeat(3"] .gallery-item img {
     max-height: 5cm !important;
+  }
+
+  /* === STORYBOARD — dense grid for long sequences (20+ frames)
+     Each frame much smaller than regular gallery to fit on 1-2 pages.
+     Opt-in via .storyboard-grid class (alongside .gallery-grid). */
+  .storyboard-grid {
+    display: block !important;
+    column-count: 6 !important;
+    column-gap: 0.12cm !important;
+    column-fill: balance !important;
+    grid-template-columns: none !important;
+    margin: 0.3cm 0 !important;
+  }
+  .storyboard-grid .gallery-item {
+    margin: 0 0 0.15cm 0 !important;
+    aspect-ratio: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .storyboard-grid .gallery-item img,
+  .storyboard-grid .gallery-item picture img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 2.3cm !important;
+    object-fit: contain !important;
+    border: 0.25pt solid #ccc !important;
+  }
+  .storyboard-grid .gallery-item figcaption {
+    font-family: 'Georgia', serif !important;
+    font-size: 5.5pt !important;
+    font-style: italic !important;
+    color: #555 !important;
+    text-align: center !important;
+    margin-top: 1pt !important;
+    line-height: 1.15 !important;
   }
 
   /* === VIDEO — hide embeds (not printable) === */
