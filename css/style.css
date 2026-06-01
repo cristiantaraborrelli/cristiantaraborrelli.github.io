@@ -1674,9 +1674,12 @@ blockquote.press-quote footer a:hover {
     text-align: center !important;
     margin-top: 2pt !important;
   }
-  /* Figurini section: 3-col multicol so 9 figurini fit nicely */
+  /* Figurini section: 3-col multicol so 9 figurini fit nicely.
+     column-fill: balance distributes photos evenly — for 3 photos that's 1+1+1
+     (horizontal row), for 9 figurini that's 3+3+3 (balanced grid). */
   .proj-sec .gallery-grid[style*="repeat(3"] {
     column-count: 3 !important;
+    column-fill: balance !important;
   }
   /* Opt-in dense gallery — for pages with 10+ photos: shrink each
      photo so all of them fit on a single dossier page (5 per column
