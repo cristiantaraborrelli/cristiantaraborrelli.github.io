@@ -1678,6 +1678,20 @@ blockquote.press-quote footer a:hover {
   .proj-sec .gallery-grid[style*="repeat(3"] {
     column-count: 3 !important;
   }
+  /* Opt-in dense gallery — for pages with 10+ photos: shrink each
+     photo so all of them fit on a single dossier page (5 per column
+     in 2 columns ~ 4.4cm tall each + gap fits within an A4 textbox). */
+  .gallery-grid.gallery-grid-3 {
+    column-count: 2 !important;
+    column-fill: balance !important;
+  }
+  .gallery-grid.gallery-grid-3 .gallery-item img,
+  .gallery-grid.gallery-grid-3 .gallery-item picture img {
+    max-height: 4.4cm !important;
+  }
+  .gallery-grid.gallery-grid-3 .gallery-item {
+    margin: 0 0 0.25cm 0 !important;
+  }
   .proj-sec .gallery-grid[style*="repeat(3"] .gallery-item img {
     max-height: 5cm !important;
   }
