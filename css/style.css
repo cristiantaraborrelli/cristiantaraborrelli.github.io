@@ -1343,7 +1343,7 @@ blockquote.press-quote footer a:hover {
   }
   .proj-hero-title {
     font-family: 'Georgia', 'Garamond', 'Times New Roman', serif !important;
-    font-size: 48pt !important;
+    font-size: 44pt !important;
     font-weight: 400 !important;
     line-height: 1.05 !important;
     letter-spacing: -0.01em !important;
@@ -1351,6 +1351,9 @@ blockquote.press-quote footer a:hover {
     text-shadow: none !important;
     margin: 0 0 0.3cm 0 !important;
     padding: 0 !important;
+    word-break: keep-all !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
   }
   .proj-hero-sub {
     font-family: 'Georgia', serif !important;
@@ -1415,6 +1418,14 @@ blockquote.press-quote footer a:hover {
     padding: 0.35cm 0 0 0 !important;
     margin: 0.5cm 0 0.45cm 0 !important;
     text-align: left !important;
+    /* Don't leave s-label alone at the bottom of a page */
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  /* And don't strand the first child after an s-label */
+  .s-label + p, .s-label + div {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
   }
   .proj-sec:first-of-type .s-label,
   .proj-body > .proj-sec:nth-child(2) .s-label {
@@ -1470,8 +1481,26 @@ blockquote.press-quote footer a:hover {
     line-height: 1.5 !important;
     text-align: center !important;
     color: #1a1a1a !important;
+    /* Let blockquotes flow naturally — break-inside avoid was pushing every
+       pull quote to a fresh page, leaving the last page 96% white.
+       Use widow/orphan control instead for graceful pagination. */
+    break-inside: auto;
+    page-break-inside: auto;
+    orphans: 4;
+    widows: 4;
+  }
+  /* Short single-paragraph blockquotes are safe to keep together */
+  blockquote:has(> p:only-child) {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+  }
+  /* Stick the last sections' blockquotes to the preceding text — kills the
+     "half-empty last page with 2 quotes" artefact. */
+  .proj-body > .proj-sec:last-child blockquote,
+  .proj-body > .proj-sec:nth-last-child(2) blockquote,
+  .proj-body > .proj-sec:nth-last-child(3) blockquote {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
   }
   /* In-text manifesto-style left-bordered quotes */
   div[style*="border-left:3px solid"] {
@@ -1569,8 +1598,10 @@ blockquote.press-quote footer a:hover {
     grid-template-columns: 5cm 1fr !important;
     padding: 0.14cm 0 !important;
     border-bottom: 0.25pt solid #ccc !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    /* Single-line rows don't need break-inside avoid — that rule was pushing
+       the whole tail of the table to a new page leaving big gaps. */
+    break-inside: auto;
+    page-break-inside: auto;
   }
   .team-row:hover { padding-left: 0 !important; background: transparent !important; }
   .team-row.feat .team-name { font-style: italic !important; }
@@ -1598,6 +1629,7 @@ blockquote.press-quote footer a:hover {
     display: block !important;
     column-count: 2 !important;
     column-gap: 0.4cm !important;
+    column-fill: auto !important;     /* fill column by column, no stranded items */
     grid-template-columns: none !important;
     margin: 0.4cm 0 !important;
   }
