@@ -122,6 +122,46 @@ body {
 
 .nav-dropdown li a:hover { color: var(--ink); }
 
+/* ─── SUB-DROPDOWN nidificato (Teatro · sotto-sezioni) ─────────────── */
+.nav-subitem { position: relative; }
+.nav-subitem > a::after {
+  content: " \25B8"; /* ▸ */
+  margin-left: 0.4em;
+  font-size: 0.7em;
+  color: var(--muted2);
+}
+.nav-subdropdown {
+  position: absolute;
+  top: -0.55rem;
+  left: 100%;
+  background: var(--white);
+  border: 1px solid var(--line);
+  min-width: 240px;
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-4px);
+  transition: all 0.18s var(--ease);
+}
+.nav-subitem:hover .nav-subdropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.nav-subdropdown li a {
+  display: block;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.63rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+.nav-subdropdown li a:hover { color: var(--ink); }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -861,6 +901,14 @@ blockquote.press-quote footer a:hover {
     font-size: 0.7rem; padding: 0.5rem 0;
     display: block; color: var(--muted);
   }
+  /* Sub-dropdown: in mobile diventa lista indentata sempre visibile */
+  .nav-links.open .nav-subdropdown {
+    position: static; opacity: 1; visibility: visible;
+    transform: none; border: none; background: none;
+    min-width: 0; padding: 0 0 0.3rem 1rem;
+    display: block;
+  }
+  .nav-links.open .nav-subitem > a::after { content: ""; }
   .project-row { grid-template-columns: 1fr; padding: 0.9rem 1.5rem; }
   .project-row-cat { display: none; }
   .proj-body { padding: 3rem 1.5rem; }
