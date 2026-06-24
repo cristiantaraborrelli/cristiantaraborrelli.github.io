@@ -122,6 +122,15 @@ body {
 
 .nav-dropdown li a:hover { color: var(--ink); }
 
+/* Tendina Opera (lista lunga 30+ voci): scroll interno solo desktop, per non tagliarsi fuori schermo. Solo la prima nav-item (Opera) — Teatro ha il sotto-menu che esce di lato e non va clippato. */
+@media (min-width: 901px) {
+  .nav-links > li:first-child > .nav-dropdown {
+    max-height: 70vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
 /* ─── SUB-DROPDOWN nidificato (Teatro · sotto-sezioni) ─────────────── */
 .nav-subitem { position: relative; }
 .nav-subitem > a::after {
